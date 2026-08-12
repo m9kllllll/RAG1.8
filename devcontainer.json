@@ -1,0 +1,4 @@
+{
+  "name": "RAG Project Environment",
+  "postStartCommand": "./setup.sh"
+}

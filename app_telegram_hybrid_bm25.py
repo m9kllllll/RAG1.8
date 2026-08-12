@@ -1,0 +1,1009 @@
+# -*- coding: utf-8 -*-
+from __future__ import annotations
+import os
+import json
+import tempfile
+import requests
+import uvicorn
+import asyncio
+import sqlite3
+import re
+import nltk
+import time
+import logging
+import hashlib
+import urllib.parse
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from urllib.parse import urljoin, urldefrag
+from typing import List, Dict, Tuple, Any, Optional, Set
+from contextlib import asynccontextmanager
+
+from bs4 import BeautifulSoup
+import pdfplumber
+from pypdf import PdfReader
+from dotenv import load_dotenv
+
+# FastAPI Imports
+from fastapi import FastAPI, HTTPException
+from fastapi.responses import HTMLResponse, StreamingResponse
+from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel, Field
+
+# Telegram Imports
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update, WebAppInfo
+from telegram.constants import ChatAction
+from telegram.ext import (
+    Application,
+    CallbackQueryHandler,
+    CommandHandler,
+    ContextTypes,
+    MessageHandler,
+    filters,
+)
+
+# LangChain & Qdrant Imports
+from langchain_core.tools import tool
+from langchain_core.retrievers import BaseRetriever
+from langchain_community.retrievers import BM25Retriever
+from langchain_community.document_loaders import PyPDFLoader, Docx2txtLoader
+from langchain_core.documents import Document
+from langchain_core.prompts import PromptTemplate, ChatPromptTemplate, MessagesPlaceholder
+from langchain_core.output_parsers import StrOutputParser
+from langchain_core.messages import AIMessage, HumanMessage
+from langchain_text_splitters import (RecursiveCharacterTextSplitter, MarkdownHeaderTextSplitter)
+
+# Docling Imports for Layout-Aware PDF & Table Parsing
+try:
+    from docling.document_converter import DocumentConverter
+    from docling.datamodel.pipeline_options import PdfPipelineOptions
+    from docling.datamodel.input_format import InputFormat
+    from docling.datamodel.format_option import PdfFormatOption
+    DOCLING_AVAILABLE = True
+except ImportError:
+    DOCLING_AVAILABLE = False
+
+try:
+    from unstructured.partition.pdf import partition_pdf
+except ImportError:
+    partition_pdf = None
+
+try:
+    nltk.data.find('tokenizers/punkt_tab')
+except LookupError:
+    nltk.download('punkt')
+    nltk.download('punkt_tab')
+
+from langchain_qdrant import QdrantVectorStore
+from qdrant_client import QdrantClient
+from qdrant_client.http.models import Distance, VectorParams
+
+from langchain_ollama import ChatOllama
+from langchain_community.embeddings import OllamaEmbeddings
+
+from langchain_classic.chains import create_retrieval_chain
+from langchain_classic.chains.combine_documents import create_stuff_documents_chain
+
+load_dotenv(override=True)
+logging.basicConfig(format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=logging.INFO)
+logger = logging.getLogger("PolyUAdvisor")
+
+# --- Global Configurations & Environment Variables ---
+CONFIG_FILE = "config.json"
+COLLECTION_NAME = "polyu_advisor_telegram_hybrid_bm25"
+DB_FILE = "polyu_advisor.db"
+BM25_CACHE_FILE = os.getenv("BM25_CACHE_FILE", "bm25_docs_cache.jsonl")
+INDEX_META_FILE = os.getenv("INDEX_META_FILE", "rag_index_meta.json")
+FORCE_REINDEX = os.getenv("FORCE_REINDEX", "false").lower() in {"1", "true", "yes", "y"}
+MAX_SCRAPE_WORKERS = int(os.getenv("MAX_SCRAPE_WORKERS", "5"))
+QDRANT_BATCH_SIZE = int(os.getenv("QDRANT_BATCH_SIZE", "50"))
+MAX_DOWNLOAD_BYTES = int(os.getenv("MAX_DOWNLOAD_BYTES", str(75 * 1024 * 1024)))
+MAX_HISTORY_MESSAGES = int(os.getenv("MAX_HISTORY_MESSAGES", "6"))
+MAX_QUERY_LENGTH = int(os.getenv("MAX_QUERY_LENGTH", "1500"))
+RESPONSE_CACHE_MAX = int(os.getenv("RESPONSE_CACHE_MAX", "128"))
+
+DEFAULT_FAST_MODEL = os.getenv("DEFAULT_FAST_MODEL", "qwen2.5:3b")
+THINKING_MODEL = os.getenv("THINKING_MODEL", "deepseek-r1:1.5b")
+VISION_MODEL = os.getenv("VISION_MODEL", "gemma3:4b")
+OLLAMA_MODEL_PROFILE = os.getenv("OLLAMA_MODEL_PROFILE", "fast").lower()
+OLLAMA_MODEL_RECOMMENDATIONS = {
+    "fast": DEFAULT_FAST_MODEL,
+    "thinking": THINKING_MODEL,
+    "vision": VISION_MODEL,
+}
+OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", OLLAMA_MODEL_RECOMMENDATIONS.get(OLLAMA_MODEL_PROFILE, DEFAULT_FAST_MODEL))
+OLLAMA_REQUEST_TIMEOUT = float(os.getenv("OLLAMA_REQUEST_TIMEOUT", "120"))
+OLLAMA_NUM_PREDICT = int(os.getenv("OLLAMA_NUM_PREDICT", "2048"))
+OLLAMA_NUM_CTX = int(os.getenv("OLLAMA_NUM_CTX", "8192"))
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+WEBAPP_URL = os.getenv("WEBAPP_URL")
+
+rag_chain = None
+vector_store = None
+tg_app = None
+bm25_retriever = None
+rag_status = {"state": "starting", "message": "RAG is starting", "started_at": time.time()}
+active_stream_sessions: Set[str] = set()
+response_cache: Dict[str, str] = {}
+
+
+class ChatHistoryItem(BaseModel):
+    role: str = "user"
+    content: str = ""
+
+class ChatRequest(BaseModel):
+    chat_id: Optional[str] = None
+    message: str = Field(..., min_length=1)
+
+class AstreamRequest(BaseModel):
+    input: str = Field(..., min_length=1)
+    chat_history: List[ChatHistoryItem] = Field(default_factory=list)
+    browserID: Optional[str] = None
+    ip: Optional[str] = None
+    session_id: Optional[str] = None
+    conversation_id: Optional[str] = None
+    message_id: Optional[str] = None
+
+class ClearContextRequest(BaseModel):
+    browserID: Optional[str] = None
+    session_id: Optional[str] = None
+
+
+@tool
+def essential_info_tool(query: str) -> str:
+    """
+    當需要最新官方資料時，從 PolyU ISE 學系網站及理大官網搜尋文件與資源。
+    """
+    logger.info(f"🔍 [Essential-Info-Tool] 搜尋 PolyU ISE 官方資料：{query}")
+    search_query = f"{query} site:polyu.edu.hk/ise OR site:polyu.edu.hk"
+    
+    try:
+        jina_url = f"https://r.jina.ai/https://www.google.com/search?q={requests.utils.quote(search_query)}"
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+            "X-No-Cache": "true"
+        }
+        resp = requests.get(jina_url, headers=headers, timeout=15)
+        
+        if resp.status_code == 200 and len(resp.text.strip()) > 100:
+            extracted_text = resp.text.strip()[:2000]
+            return (
+                "【PolyU ISE 官方網站即時搜尋結果】\n"
+                f"搜尋主題：{query}\n"
+                "官方資源內容與連結：\n"
+                f"{extracted_text}\n\n"
+                "（請整理上述資訊，並附上相關官方下載或參考連結）"
+            )
+    except Exception as e:
+        logger.warning(f"⚠️ Essential-Info-Tool 執行失敗: {e}")
+        
+    return "⚠️ 目前未能獲取 PolyU ISE 官方網站即時搜尋資料。"
+
+
+def set_rag_status(state: str, message: str) -> None:
+    rag_status.update({"state": state, "message": message, "updated_at": time.time()})
+    logger.info(f"📍 RAG status: {state} - {message}")
+
+def normalize_doc_url(url: str) -> str:
+    return urldefrag(url.strip())[0]
+
+def compute_index_fingerprint(config_data: Dict[str, Any], embedding_model: str = "nomic-embed-text") -> str:
+    payload = {
+        "config": config_data,
+        "embedding_model": embedding_model,
+        "chunk_size": 600,
+        "chunk_overlap": 100,
+        "scraper_version": "optimized-v9-docling-integration",
+    }
+    return hashlib.sha256(json.dumps(payload, sort_keys=True, ensure_ascii=False).encode("utf-8")).hexdigest()
+
+def load_index_meta() -> Dict[str, Any]:
+    if not os.path.exists(INDEX_META_FILE):
+        return {}
+    try:
+        with open(INDEX_META_FILE, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except Exception as e:
+        logger.warning(f"⚠️ Could not load index metadata: {e}")
+        return {}
+
+def save_index_meta(fingerprint: str, points_count: int) -> None:
+    with open(INDEX_META_FILE, "w", encoding="utf-8") as f:
+        json.dump({"fingerprint": fingerprint, "points_count": points_count, "updated_at": time.time()}, f, indent=2)
+
+def save_bm25_cache(documents: List[Document]) -> None:
+    try:
+        with open(BM25_CACHE_FILE, "w", encoding="utf-8") as f:
+            for doc in documents:
+                f.write(json.dumps({"page_content": doc.page_content, "metadata": doc.metadata}, ensure_ascii=False) + "\n")
+        logger.info(f"✅ Saved BM25 cache with {len(documents)} chunks.")
+    except Exception as e:
+        logger.warning(f"⚠️ Could not save BM25 cache: {e}")
+
+def load_bm25_cache() -> List[Document]:
+    if not os.path.exists(BM25_CACHE_FILE):
+        return []
+    docs = []
+    try:
+        with open(BM25_CACHE_FILE, "r", encoding="utf-8") as f:
+            for line in f:
+                if line.strip():
+                    item = json.loads(line)
+                    docs.append(Document(page_content=item.get("page_content", ""), metadata=item.get("metadata", {})))
+        logger.info(f"✅ Loaded BM25 cache with {len(docs)} chunks.")
+    except Exception as e:
+        logger.warning(f"⚠️ Could not load BM25 cache: {e}")
+    return docs
+
+def build_bm25_from_cache() -> Optional[BM25Retriever]:
+    docs = load_bm25_cache()
+    if not docs:
+        return None
+    retriever = BM25Retriever.from_documents(docs)
+    retriever.k = 10
+    return retriever
+
+def download_to_tempfile(url: str, suffix: str, headers: Dict[str, str], timeout: int = 120, max_bytes: int = MAX_DOWNLOAD_BYTES) -> Optional[str]:
+    tmp_path = None
+    try:
+        with requests.get(url, headers=headers, timeout=timeout, stream=True, allow_redirects=True) as resp:
+            if resp.status_code != 200:
+                logger.warning(f"⚠️ Failed to fetch {url} (HTTP {resp.status_code})")
+                return None
+            with tempfile.NamedTemporaryFile(delete=False, suffix=suffix) as tmp:
+                tmp_path = tmp.name
+                total = 0
+                for chunk in resp.iter_content(chunk_size=1024 * 1024):
+                    if not chunk:
+                        continue
+                    total += len(chunk)
+                    if total > max_bytes:
+                        raise ValueError(f"Download exceeded limit of {max_bytes} bytes")
+                    tmp.write(chunk)
+        return tmp_path
+    except Exception as e:
+        logger.error(f"⚠️ Download failed for {url}: {e}")
+        if tmp_path and os.path.exists(tmp_path):
+            os.unlink(tmp_path)
+        return None
+
+
+CAR_GUR_SOURCE_URL = "https://www.polyu.edu.hk/cus/student/4-year-undergraduate-student/general-university-requirements/curriculum-framework-of-the-general-university-requirements"
+ISE_PROGRAMME_DETAILS_URL = "https://www.polyu.edu.hk/ise/study/undergraduate-programmes/beng-hons-scheme-in-product-and-industrial-engineering/bachelor-of-engineering-honours-in-industrial-and-systems-engineering/programme-details"
+ISE_CONTACT_URL = "https://www.polyu.edu.hk/ise/about-ise/contact-us/"
+
+CURATED_FACT_INDEX = {
+    "car_gur": {
+        "query_terms": [
+            "CAR/GUR", "CAR", "GUR", "Cluster-Area Requirements", "General University Requirements",
+            "學分要求", "通識", "大學核心", "PolyU ISE CAR credits", "Senior Year Intake GUR", "高年級銜接",
+        ],
+        "facts": [
+            "核心學制關係：CAR (Cluster-Area Requirements) 是 GUR (General University Requirements) 旗下的子項目（包含關係），絕非相互獨立或相加的兩門課程。",
+            "四年制新生（Year 1 Entry）GUR 要求：2025/26 學年起入學總 GUR 為 27 學分（含 9 學分 CAR）；2022/23 至 2024/25 學年入學總 GUR 為 30 學分（含 12 學分 CAR）。",
+            "高年級銜接生（Senior Year Intake / Articulated Degree）：GUR 要求大幅豁免，通常只需修讀 9 個 GUR 學分（包含 6 個 CAR 學分），具體依入學審查免修結果為準。",
+            "修讀彈性與限制：PolyU 並未硬性規定每學期必須修讀多少 CAR/GUR 學分，學生可自主彈性安排，無每學期最低門檻。",
+            "畢業時間與排課建議：常規最高修讀上限為每學期 21 學分。學生通常會在大一與大二（前 3 到 4 個學期）將多數 GUR 與 CAR 完成，以便大三大四專心進行 Capstone 畢業論文與 WIE (Work-Integrated Education) 實習。",
+            "CAR 語言要求：CAR 課程同時用作滿足英文閱讀寫作 (ER/EW) 及中文閱讀寫作 (CR/CW) 語言要求。",
+        ],
+        "answer_format": [
+            "使用繁體中文回答，結構必須極度清晰。",
+            "首先明確澄清：CAR 屬於 GUR 的一部分（包含關係），切勿將兩者學分簡單相加。",
+            "區分四年制直入新生 (Year 1 Entry) 與高年級銜接生 (Senior Year Intake) 的不同學分門檻。",
+            "說明排課彈性：每學期無硬性門檻，通常可在 3 至 4 個學期內修完。",
+            "引導詢問用戶屬於哪一種入學身份（Year 1 Entry 還是 Senior Year Intake），以提供最精準的建議。",
+        ],
+        "sources": [CAR_GUR_SOURCE_URL, ISE_PROGRAMME_DETAILS_URL, ISE_CONTACT_URL],
+    }
+}
+
+TERM_INDEX = {}
+if os.path.exists("term_index.json"):
+    try:
+        with open("term_index.json", "r", encoding="utf-8") as f:
+            TERM_INDEX = json.load(f)
+        logger.info(f"✅ Loaded {len(TERM_INDEX)} terms from term_index.json")
+    except Exception as e:
+        logger.error(f"❌ Error loading term_index.json: {e}")
+
+
+def sanitize_hallucinations(text: str) -> str:
+    if not text:
+        return ""
+    pattern = r"Women\s*in\s*Engineering"
+    if re.search(pattern, text, re.IGNORECASE):
+        logger.warning("🚨 Hallucination caught: 'Women in Engineering' replaced with 'Work-Integrated Education'")
+        text = re.sub(pattern, "Work-Integrated Education (校企協作教育)", text, flags=re.IGNORECASE)
+    text = text.replace("WomeninEngineering", "Work-Integrated Education")
+    return text
+
+
+def normalize_and_expand_query(query: str) -> str:
+    cantonese_map = {
+        "有甚麼": "要求 指引",
+        "有咩": "要求 指引",
+        "點樣": "流程 方法",
+        "幾多": "學分 數量",
+        "邊啲": "課程 科目",
+    }
+    for cant, std in cantonese_map.items():
+        query = query.replace(cant, std)
+    
+    if re.search(r'\bWIE\b', query, re.IGNORECASE):
+        query += " Work-Integrated Education 校企協作教育 實習 實習要求 實習表格"
+        
+    if re.search(r'\bCAR\b', query, re.IGNORECASE):
+        query += " Cluster-Area Requirements 通識教育 通識學分要求 GUR 包含關係"
+
+    if re.search(r'\bGUR\b', query, re.IGNORECASE):
+        query += " General University Requirements 大學核心課程要求"
+        
+    return query
+
+
+def is_car_gur_query(query_text: str) -> bool:
+    normalized = query_text.lower().replace("／", "/")
+    has_car = bool(re.search(r"\bcar\b|cluster-area|cluster area|學群|群組", normalized, re.IGNORECASE))
+    has_gur = bool(re.search(r"\bgur\b|general university requirements|大學核心|通識|學分要求", normalized, re.IGNORECASE))
+    return has_car or has_gur
+
+def build_index_documents() -> List[Document]:
+    docs = []
+    for key, item in CURATED_FACT_INDEX.items():
+        docs.append(Document(
+            page_content="\n".join([
+                f"Topic: {key}",
+                "Search terms: " + ", ".join(item["query_terms"]),
+                "Facts:",
+                *[f"- {fact}" for fact in item["facts"]],
+                "Answer format:",
+                *[f"- {fmt}" for fmt in item["answer_format"]],
+                "Sources:",
+                *[f"- {source}" for source in item["sources"]],
+            ]),
+            metadata={
+                "source": item["sources"][0],
+                "category": f"Programmatic Index: {key}",
+                "academic_level": "UG",
+                "priority": "programmatic_index",
+            },
+        ))
+    return docs
+
+def build_term_index_documents() -> List[Document]:
+    docs = []
+    if not TERM_INDEX:
+        return docs
+        
+    for key, item in TERM_INDEX.items():
+        if isinstance(item, dict):
+            content_lines = [
+                f"Term / Keyword: {key}",
+                f"English Name: {item.get('english', '')}",
+                f"Chinese Name: {item.get('chinese', '')}",
+                f"Abbreviation: {item.get('abbreviation', key)}",
+                f"Category: {item.get('category', 'Glossary')}"
+            ]
+            if item.get("programme_code"):
+                content_lines.append(f"Programme Code: {item['programme_code']}")
+            if item.get("jupas_code"):
+                content_lines.append(f"JUPAS Code: {item['jupas_code']}")
+                
+            content = "\n".join(content_lines)
+        else:
+            content = f"Term: {key}\nDefinition: {item}"
+            
+        docs.append(Document(
+            page_content=content,
+            metadata={
+                "source": "term_index.json",
+                "category": item.get("category", "Glossary Index") if isinstance(item, dict) else "Glossary Index",
+                "priority": "programmatic_index",
+            }
+        ))
+    logger.info(f"✅ Built {len(docs)} enriched documents from term_index.json")
+    return docs
+
+def extract_course_codes(text: str) -> List[str]:
+    return sorted(set(re.findall(r"\b[A-Z]{2,5}\d{3,5}\b", text.upper())))
+
+def classify_query(query: str) -> Dict[str, Any]:
+    query_lower = query.lower()
+    course_codes = extract_course_codes(query)
+    comparison_terms = ["compare", "versus", " vs ", "better", "suitable", "比較", "分別", "哪個"]
+    prerequisite_terms = ["prerequisite", "pre-requisite", "先修", "要求"]
+    programme_terms = ["programme", "curriculum", "credit", "car", "gur", "wie", "課程", "學分", "實習"]
+
+    if any(term in query_lower for term in comparison_terms) and len(course_codes) >= 2:
+        query_type, complexity = "COURSE_COMPARISON", "complex"
+    elif course_codes and any(term in query_lower for term in prerequisite_terms):
+        query_type, complexity = "PREREQUISITE", "medium"
+    elif course_codes:
+        query_type, complexity = "COURSE_LOOKUP", "simple"
+    elif any(term in query_lower for term in programme_terms):
+        query_type, complexity = "PROGRAMME", "medium"
+    else:
+        query_type, complexity = "GENERAL_POLYU", "medium"
+
+    if complexity == "simple":
+        vector_k, bm25_k, final_k = 8, 8, 3
+    elif complexity == "complex":
+        vector_k, bm25_k, final_k = 15, 15, 5
+    else:
+        vector_k, bm25_k, final_k = 10, 10, 4
+
+    bm25_weight, vector_weight = (0.65, 0.35) if course_codes else (0.50, 0.50)
+
+    return {
+        "query_type": query_type,
+        "complexity": complexity,
+        "course_codes": course_codes,
+        "vector_k": vector_k,
+        "bm25_k": bm25_k,
+        "final_k": final_k,
+        "bm25_weight": bm25_weight,
+        "vector_weight": vector_weight,
+    }
+
+def compress_document_context(doc: Document, query: str, max_chars: int = 2000) -> Document:
+    meta = doc.metadata.copy()
+    meta.setdefault("source", "PolyU ISE Official Resource")
+    meta.setdefault("category", "Official Document")
+    meta.setdefault("_score", 0.50)
+    meta.setdefault("_confidence", "MEDIUM")
+    
+    if meta.get("is_table") and meta.get("raw_table"):
+        meta["context_compressed"] = False
+        raw_html = meta["raw_table"]
+        full_content = f"Official Table Data:\n{raw_html}"
+        return Document(page_content=full_content, metadata=meta)
+
+    if len(doc.page_content) <= max_chars:
+        return Document(page_content=doc.page_content, metadata=meta)
+        
+    terms = [t.lower() for t in re.findall(r"[A-Za-z0-9]{3,}|[\u4e00-\u9fff]{2,}", query)]
+    sentences = re.split(r"(?<=[。.!?])\s+|\n+", doc.page_content)
+    selected = [s.strip() for s in sentences if s.strip() and any(t in s.lower() for t in terms)]
+    content = "\n".join(selected[:15]) if selected else doc.page_content[:max_chars]
+    
+    if len(content) > max_chars:
+        content = content[:max_chars].rsplit(" ", 1)[0]
+        
+    meta["context_compressed"] = True
+    return Document(page_content=content, metadata=meta)
+
+def fetch_via_jina_ai(target_url: str) -> Optional[str]:
+    jina_url = f"https://r.jina.ai/{target_url}"
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+        "X-No-Cache": "true"
+    }
+    try:
+        logger.info(f"🤖 Requesting Jina AI parsing for: {target_url}")
+        resp = requests.get(jina_url, headers=headers, timeout=45)
+        if resp.status_code == 200 and len(resp.text.strip()) > 100:
+            logger.info(f"✅ Jina AI successfully extracted {len(resp.text)} characters.")
+            return resp.text.strip()
+    except Exception as e:
+        logger.error(f"❌ Jina AI request exception for {target_url}: {e}")
+    return None
+
+def advanced_multi_strategy_chunker(
+    documents: List[Document], 
+    target_chunk_size: int = 600, 
+    chunk_overlap: int = 100
+) -> List[Document]:
+    final_chunks: List[Document] = []
+
+    headers_to_split_on = [
+        ("#", "Header_1"),
+        ("##", "Header_2"),
+        ("###", "Header_3"),
+    ]
+    markdown_splitter = MarkdownHeaderTextSplitter(
+        headers_to_split_on=headers_to_split_on, 
+        strip_headers=False
+    )
+
+    recursive_splitter = RecursiveCharacterTextSplitter(
+        chunk_size=target_chunk_size,
+        chunk_overlap=chunk_overlap,
+        separators=["\n\n", "\n", " ", ""]
+    )
+
+    for doc in documents:
+        base_metadata = doc.metadata.copy()
+        raw_text = doc.page_content
+
+        header_splits = markdown_splitter.split_text(raw_text)
+
+        for h_split in header_splits:
+            heading_path = " > ".join(
+                [val for key, val in h_split.metadata.items() if key.startswith("Header_")]
+            )
+            
+            heading_metadata = base_metadata.copy()
+            heading_metadata.update(h_split.metadata)
+            heading_metadata.update({
+                "heading_path": heading_path if heading_path else "Root Section",
+            })
+
+            if len(h_split.page_content) > target_chunk_size:
+                rec_splits = recursive_splitter.split_text(h_split.page_content)
+                for rec_text in rec_splits:
+                    meta = heading_metadata.copy()
+                    meta.update({"chunk_strategy": "heading+recursive"})
+                    final_chunks.append(Document(page_content=rec_text, metadata=meta))
+            else:
+                meta = heading_metadata.copy()
+                meta.update({"chunk_strategy": "heading_direct"})
+                final_chunks.append(Document(page_content=h_split.page_content, metadata=meta))
+
+    for chunk in final_chunks:
+        chunk.metadata["course_codes"] = extract_course_codes(chunk.page_content)
+
+    logger.info(f"⚡ Enhanced Multi-Strategy Processing: Created {len(final_chunks)} structured chunks.")
+    return final_chunks
+
+def init_sqlite_db():
+    conn = sqlite3.connect(DB_FILE)
+    cursor = conn.cursor()
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS polyu_requirements (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        category TEXT NOT NULL,
+        sub_category TEXT,
+        code TEXT UNIQUE,
+        title TEXT NOT NULL,
+        credits INTEGER DEFAULT 3,
+        description TEXT NOT NULL,
+        department_owner TEXT DEFAULT 'ISE'
+    );
+    """)
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS student_sessions (
+        student_chat_id TEXT PRIMARY KEY,
+        current_faculty TEXT,
+        last_interaction TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    );
+    """)
+    conn.commit()
+    conn.close()
+    logger.info("✅ SQLite database initialized successfully.")
+
+def update_student_session(chat_id: str, faculty: Optional[str] = None):
+    try:
+        conn = sqlite3.connect(DB_FILE)
+        cursor = conn.cursor()
+        cursor.execute("""
+            INSERT INTO student_sessions (student_chat_id, current_faculty, last_interaction)
+            VALUES (?, ?, CURRENT_TIMESTAMP)
+            ON CONFLICT(student_chat_id) DO UPDATE SET
+                current_faculty = COALESCE(excluded.current_faculty, student_sessions.current_faculty),
+                last_interaction = CURRENT_TIMESTAMP;
+        """, (str(chat_id), faculty))
+        conn.commit()
+        conn.close()
+    except Exception as e:
+        logger.error(f"❌ SQLite session update failed: {e}")
+
+def clear_user_history(user_id: str) -> bool:
+    try:
+        conn = sqlite3.connect(DB_FILE)
+        cursor = conn.cursor()
+        cursor.execute("DELETE FROM student_sessions WHERE student_chat_id = ?", (str(user_id),))
+        conn.commit()
+        conn.close()
+        return True
+    except Exception as e:
+        logger.error(f"⚠️ Error clearing SQLite history for user {user_id}: {e}")
+        return False
+
+def strip_think_tags(text: str) -> str:
+    if not text:
+        return ""
+    cleaned = re.sub(r'<think>[\s\S]*?</think>', '', text)
+    return cleaned.strip()
+
+def split_text(text: str, max_length: int = 4000) -> List[str]:
+    if len(text) <= max_length:
+        return [text]
+
+    chunks = []
+    while text:
+        if len(text) <= max_length:
+            chunks.append(text)
+            break
+
+        split_point = text.rfind("\n", 0, max_length)
+        if split_point == -1:
+            split_point = text.rfind(" ", 0, max_length)
+        if split_point == -1:
+            split_point = max_length
+
+        chunks.append(text[:split_point].strip())
+        text = text[split_point:].strip()
+
+    return chunks
+
+async def send_chunked_message(update: Update, text: str, parse_mode: str = "Markdown", reply_to_message_id: Optional[int] = None):
+    chunks = split_text(text)
+    for i, chunk in enumerate(chunks):
+        msg_reply_id = reply_to_message_id if i == 0 else None
+        try:
+            await update.message.reply_text(chunk, parse_mode=parse_mode, reply_to_message_id=msg_reply_id)
+        except Exception:
+            await update.message.reply_text(chunk, reply_to_message_id=msg_reply_id)
+
+def classify_academic_level(url: str, text: str) -> str:
+    url_lower = url.lower()
+    text_lower = text.lower()
+    if any(k in url_lower for k in ["undergraduate", "beng", "bsc", "ug"]) or \
+       any(k in text_lower for k in ["bachelor of", "bsc (hons)", "beng (hons)"]):
+        return "UG"
+    elif any(k in url_lower for k in ["postgraduate", "msc", "master", "pg"]) or \
+         any(k in text_lower for k in ["master of", "msc in", "postgraduate scheme"]):
+        return "PG"
+    return "General"
+
+
+# --- DOCLING PDF PARSER INTEGRATION ---
+def load_pdf_with_docling(pdf_path: str, source_url: str) -> List[Document]:
+    """
+    Uses IBM Docling to convert complex layout PDFs (multi-column tables, progression patterns)
+    into clean Markdown for RAG ingestion. Falls back to standard PyPDFLoader if Docling is unavailable.
+    """
+    if not DOCLING_AVAILABLE:
+        logger.warning("⚠️ Docling not installed. Falling back to standard PyPDFLoader.")
+        try:
+            return PyPDFLoader(pdf_path).load()
+        except Exception as e:
+            return [Document(page_content=f"Error loading PDF: {e}", metadata={"source": source_url})]
+
+    logger.info(f"📄 Parsing PDF with IBM Docling layout engine: {source_url}")
+    try:
+        pipeline_options = PdfPipelineOptions()
+        pipeline_options.do_ocr = True
+        pipeline_options.do_table_structure = True
+
+        converter = DocumentConverter(
+            format_options={
+                InputFormat.PDF: PdfFormatOption(pipeline_options=pipeline_options)
+            }
+        )
+        result = converter.convert(pdf_path)
+        doc = result.document
+        markdown_content = doc.export_to_markdown()
+
+        level = classify_academic_level(source_url, markdown_content)
+        return [
+            Document(
+                page_content=markdown_content,
+                metadata={
+                    "source": source_url,
+                    "category": "Official Docling Parsed Document",
+                    "academic_level": level,
+                    "priority": "programmatic_index"
+                }
+            )
+        ]
+    except Exception as e:
+        logger.error(f"❌ Docling parsing failed for {source_url}: {e}. Falling back to standard loader.")
+        try:
+            loader = PyPDFLoader(pdf_path)
+            return loader.load()
+        except Exception as fallback_err:
+            logger.error(f"❌ Fallback loader failed: {fallback_err}")
+            return []
+
+
+class ScoreInjectingRetriever(BaseRetriever):
+    vectorstore: Any = Field(description="The underlying Qdrant vector store")
+    bm25: Any = Field(default=None, description="Optional BM25 lexical retriever")
+    k: int = Field(default=4)
+    score_threshold: float = Field(default=0.45)
+
+    def _perform_hybrid_search(self, raw_query: str) -> List[Document]:
+        query = normalize_and_expand_query(raw_query)
+        plan = classify_query(query)
+        candidate_docs: Dict[str, Dict[str, Any]] = {}
+        start = time.perf_counter()
+
+        def vector_lookup():
+            return self.vectorstore.similarity_search_with_score(query, k=plan["vector_k"])
+
+        def bm25_lookup():
+            if not self.bm25:
+                return []
+            try:
+                return self.bm25.invoke(query)
+            except AttributeError:
+                return self.bm25.get_relevant_documents(query)
+
+        with ThreadPoolExecutor(max_workers=2) as executor:
+            vector_future = executor.submit(vector_lookup)
+            bm25_future = executor.submit(bm25_lookup)
+            try:
+                docs_and_scores = vector_future.result(timeout=8)
+            except Exception as e:
+                logger.warning(f"⚠️ Vector retrieval failed: {e}")
+                docs_and_scores = []
+            try:
+                bm25_docs = bm25_future.result(timeout=4)
+            except Exception as e:
+                logger.warning(f"⚠️ BM25 retrieval failed: {e}")
+                bm25_docs = []
+
+        for rank, (doc, score) in enumerate(docs_and_scores, start=1):
+            key = self._doc_key(doc)
+            candidate_docs[key] = {
+                "doc": doc,
+                "vector_score": self._normalize_vector_score(score),
+                "bm25_score": 0.0,
+                "vector_rank": rank,
+                "bm25_rank": None,
+            }
+
+        for rank, doc in enumerate(bm25_docs[: plan["bm25_k"]], start=1):
+            key = self._doc_key(doc)
+            rank_score = 1.0 / rank
+            if key not in candidate_docs:
+                candidate_docs[key] = {
+                    "doc": doc,
+                    "vector_score": 0.0,
+                    "bm25_score": rank_score,
+                    "vector_rank": None,
+                    "bm25_rank": rank,
+                }
+            else:
+                candidate_docs[key]["bm25_score"] = rank_score
+                candidate_docs[key]["bm25_rank"] = rank
+
+        ranked_docs = []
+        query_lower = query.lower()
+        is_pg_query = any(kw in query_lower for kw in ["master", "msc", "postgraduate", "pgd", "pg"])
+        is_wie_query = "wie" in raw_query.lower() or "實習" in raw_query
+        query_codes = set(plan["course_codes"])
+
+        for item in candidate_docs.values():
+            doc = item["doc"]
+            vector_score = item["vector_score"]
+            bm25_score = item["bm25_score"]
+            effective_score = (plan["vector_weight"] * vector_score) + (plan["bm25_weight"] * bm25_score)
+            
+            source = str(doc.metadata.get("source", "")).lower()
+            content = doc.page_content
+            content_lower = content.lower()
+            level_meta = str(doc.metadata.get("academic_level", "")).upper()
+
+            if is_wie_query and ("work-integrated" in content_lower or "wie" in content_lower or "實習" in content_lower):
+                effective_score += 0.35
+
+            if doc.metadata.get("priority") == "programmatic_index":
+                effective_score += 0.35
+            if query_codes and query_codes.intersection(set(doc.metadata.get("course_codes", []))):
+                effective_score += 0.30
+
+            effective_score = min(max(effective_score, 0.0), 1.0)
+
+            if effective_score >= self.score_threshold:
+                new_meta = doc.metadata.copy()
+                new_meta["_score"] = round(effective_score, 3)
+                new_meta["_confidence"] = "HIGH" if effective_score >= 0.80 else "MEDIUM"
+                ranked_docs.append(compress_document_context(Document(page_content=doc.page_content, metadata=new_meta), query))
+
+        ranked_docs.sort(key=lambda d: d.metadata.get("_score", 0), reverse=True)
+        return ranked_docs[: plan["final_k"]] if len(ranked_docs) > plan["final_k"] else ranked_docs
+
+    def _get_relevant_documents(self, query: str, *, run_manager=None) -> List[Document]:
+        ranked_docs = self._perform_hybrid_search(query)
+        top_score = ranked_docs[0].metadata.get("_score", 0.0) if ranked_docs else 0.0
+
+        if top_score < self.score_threshold and len(ranked_docs) == 0:
+            official_result = essential_info_tool.invoke({"query": query})
+            if official_result and "⚠️" not in official_result:
+                official_doc = Document(
+                    page_content=official_result,
+                    metadata={
+                        "source": ISE_PROGRAMME_DETAILS_URL,
+                        "priority": "essential_tool",
+                        "_score": 0.95,
+                        "_confidence": "HIGH",
+                        "category": "PolyU ISE Official Live Data"
+                    }
+                )
+                ranked_docs.insert(0, official_doc)
+
+        return ranked_docs[: self.k]
+
+    @staticmethod
+    def _normalize_vector_score(raw_score: float) -> float:
+        score = float(raw_score)
+        if score > 1.0:
+            return max(0.0, 1.0 / (1.0 + score))
+        return min(max(score, 0.0), 1.0)
+
+    @staticmethod
+    def _doc_key(doc: Document) -> str:
+        source = str(doc.metadata.get("source", ""))
+        page = str(doc.metadata.get("page", doc.metadata.get("page_start", "")))
+        return f"{source}:{page}:{doc.page_content[:240]}"
+
+
+def get_rag_chain():
+    global bm25_retriever, vector_store
+    qdrant_url = os.getenv("QDRANT_URL")
+    qdrant_api_key = os.getenv("QDRANT_API_KEY")
+    ollama_url = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
+    ollama_model = os.getenv("OLLAMA_MODEL", DEFAULT_FAST_MODEL)
+
+    logger.info("🔌 Initializing Ollama & Qdrant Client...")
+    embeddings = OllamaEmbeddings(model="nomic-embed-text", base_url=ollama_url)
+    client = QdrantClient(url=qdrant_url, api_key=qdrant_api_key, timeout=120, check_compatibility=False)
+
+    config_data = {}
+    if os.path.exists(CONFIG_FILE):
+        with open(CONFIG_FILE, "r", encoding="utf-8") as cfg:
+            config_data = json.load(cfg)
+
+    if not client.collection_exists(COLLECTION_NAME):
+        client.create_collection(
+            collection_name=COLLECTION_NAME,
+            vectors_config=VectorParams(size=768, distance=Distance.COSINE),
+        )
+
+    v_store = QdrantVectorStore(client=client, collection_name=COLLECTION_NAME, embedding=embeddings)
+    vector_store = v_store
+
+    info = client.get_collection(COLLECTION_NAME)
+    points_count = info.points_count if info.points_count is not None else 0
+    fingerprint = compute_index_fingerprint(config_data)
+    cached_meta = load_index_meta()
+
+    if not FORCE_REINDEX and (points_count >= 10000 or (points_count > 0 and cached_meta.get("fingerprint") == fingerprint)):
+        logger.info(f"⚡ Qdrant collection has {points_count} vectors. Skipping scraping & indexing!")
+        bm25_retriever = build_bm25_from_cache()
+        return build_rag_chain_instance(v_store, bm25_retriever, ollama_model, ollama_url)
+
+    logger.info("🔍 Starting Docling PDF ingestion & vector indexing pipeline...")
+    all_docs = []
+    
+    if config_data:
+        urls = config_data.get("urls", [])
+        pdf_paths = config_data.get("pdfs", [])
+
+        if pdf_paths:
+            headers = {"User-Agent": "Mozilla/5.0"}
+            for pdf_url in pdf_paths:
+                try:
+                    temp_pdf = download_to_tempfile(pdf_url, ".pdf", headers, timeout=120)
+                    if not temp_pdf:
+                        continue
+
+                    # Process PDF using Docling Integration
+                    docs = load_pdf_with_docling(temp_pdf, pdf_url)
+                    all_docs.extend(docs)
+
+                    if os.path.exists(temp_pdf):
+                        os.unlink(temp_pdf)
+                except Exception as e:
+                    logger.error(f"⚠️ PDF Pipeline Error for {pdf_url}: {e}")
+
+    all_docs.extend(build_index_documents())
+    all_docs.extend(build_term_index_documents())
+
+    splits = []
+    if all_docs:
+        splits = advanced_multi_strategy_chunker(documents=all_docs, target_chunk_size=600, chunk_overlap=100)
+        save_bm25_cache(splits)
+        bm25_retriever = BM25Retriever.from_documents(splits)
+        bm25_retriever.k = 10
+    else:
+        bm25_retriever = None
+
+    if splits:
+        logger.info(f"📤 Uploading {len(splits)} document chunks to Qdrant...")
+        batch_size = QDRANT_BATCH_SIZE
+        for i in range(0, len(splits), batch_size):
+            batch = splits[i:i + batch_size]
+            try: 
+                v_store.add_documents(batch)
+            except Exception as e: 
+                logger.error(f"❌ Upload Batch Failed [{i}:{i+batch_size}]: {e}")
+        save_index_meta(fingerprint, client.get_collection(COLLECTION_NAME).points_count)
+
+    return build_rag_chain_instance(v_store, bm25_retriever, ollama_model, ollama_url)
+
+def clean_source_info(doc: Document) -> Tuple[str, str]:
+    src = str(doc.metadata.get("source", "")).strip()
+    category = str(doc.metadata.get("category", "")).strip()
+    if src.startswith("http://") or src.startswith("https://"):
+        return f"Official Academic Guide ({os.path.basename(urllib.parse.urlparse(src).path)})", src
+    return "PolyU ISE Academic Document", ""
+
+def format_reference_footer(context_docs: List[Document], min_score: float = 0.45) -> str:
+    if not context_docs:
+        return ""
+    references = []
+    seen = set()
+    for doc in context_docs:
+        score = doc.metadata.get("_score", 0.0)
+        if score < min_score: continue
+        title, url = clean_source_info(doc)
+        if url in seen: continue
+        seen.add(url if url else title)
+        if url:
+            references.append(f"- [{title}]({url}) | 🎯 置信度：{score:.2f}")
+        else:
+            references.append(f"- 📄 **{title}** | 🎯 置信度：{score:.2f}")
+    if not references: return ""
+    return "\n\n---\n### 📚 參考資料與置信度\n" + "\n".join(references)
+
+def build_rag_chain_instance(v_store, bm25, ollama_model: str, ollama_url: str):
+    global vector_store
+    vector_store = v_store
+
+    llm = ChatOllama(
+        model=ollama_model,
+        base_url=ollama_url,
+        temperature=0.2,
+        top_p=0.9,
+        num_predict=OLLAMA_NUM_PREDICT,
+        num_ctx=OLLAMA_NUM_CTX,
+    )
+    
+    retriever = ScoreInjectingRetriever(vectorstore=v_store, bm25=bm25, k=4, score_threshold=0.45)
+    document_prompt = PromptTemplate.from_template("Document: {category}\nSource: {source}\nContent:\n{page_content}\n\n")
+
+    system_prompt = (
+        "你是 Alex，香港理工大學 (PolyU) 工業及系統工程學系 (ISE) 的官方學術諮詢助手。\n\n"
+        "⚡ 速度與思考過程優化 (FAST ANSWER RULE):\n"
+        "務必直接回答問題，嚴禁輸出任何 <think> 標籤或內部推理過程 (Do NOT generate <think> tokens)。\n\n"
+        "⚠️ 學制邏輯極重要約束 (ACADEMIC LOGIC RULES):\n"
+        "1. **CAR 屬於 GUR 的一部分**：CAR (Cluster-Area Requirements) 是 GUR (General University Requirements) 旗下的子項目，**絕非相互獨立**。\n"
+        "2. **入學身份差異**：四年制新生 (Year 1 Entry) 需修讀 27–30 GUR 學分；高年級銜接生 (Senior Year Intake) 通常僅需 9 個 GUR 學分。\n"
+        "3. **WIE 定義**：'WIE' 唯一代表 **Work-Integrated Education (校企協作教育 / 實習)**。\n\n"
+        "Context:\n{context}"
+    )
+    
+    qa_prompt = ChatPromptTemplate.from_messages([
+        ("system", system_prompt),
+        MessagesPlaceholder("chat_history"), 
+        ("human", "{input}")
+    ])
+
+    combine_docs_chain = create_stuff_documents_chain(llm, qa_prompt, document_prompt=document_prompt)
+    return create_retrieval_chain(retriever, combine_docs_chain), v_store
+
+async def run_rag_query(query_text: str, chat_history: Optional[List[ChatHistoryItem]] = None) -> str:
+    global rag_chain
+    if rag_chain is None:
+        return "⏳ Alex 正在準備知識庫，請稍後再試。"
+    try:
+        result = await asyncio.wait_for(
+            rag_chain.ainvoke({"input": query_text, "chat_history": normalize_chat_history(chat_history or [])}),
+            timeout=OLLAMA_REQUEST_TIMEOUT
+        )
+        raw_answer = result.get("answer", "抱歉，我無法檢索到相關解答。")
+        return sanitize_hallucinations(strip_think_tags(raw_answer)) + format_reference_footer(result.get("context", []))
+    except Exception as e:
+        return f"抱歉，系統運算時發生技術故障：{e}"
+
+async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    await update.message.reply_text("👋 歡迎使用 PolyU ISE 學術諮詢 AI 助手 (Alex)！請直接提問。")
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    init_sqlite_db()
+    loop = asyncio.get_event_loop()
+    loop.run_in_executor(None, lambda: globals().update({"rag_chain": get_rag_chain()[0]}))
+    yield
+
+app = FastAPI(title="PolyU AI Academic Advisor", lifespan=lifespan)
+app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_credentials=True, allow_methods=["*"], allow_headers=["*"])
+
+@app.post("/api/chat")
+async def api_chat(req: ChatRequest):
+    return {"status": "success", "response": await run_rag_query(req.message.strip())}
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8000)

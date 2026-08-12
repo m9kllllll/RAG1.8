@@ -1,0 +1,3784 @@
+{
+    "Allen Shi Lop Tak Lecture Theatre": {
+        "english": "Allen Shi Lop Tak Lecture Theatre",
+        "chinese": "史立德演講廳",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Lam Tai Fai Amphitheatre": {
+        "english": "Lam Tai Fai Amphitheatre",
+        "chinese": "林大輝廣場",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Anita Chan Lai Ling Building": {
+        "english": "Anita Chan Lai Ling Building",
+        "chinese": "陳麗玲樓",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Block N": {
+        "english": "Block N",
+        "chinese": "N座",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Block Z": {
+        "english": "Block Z",
+        "chinese": "Z座",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "C-for- Chinese @JC Chinese Learning Centre": {
+        "english": "C-for- Chinese @JC Chinese Learning Centre",
+        "chinese": "「賽馬會友趣學中文」計劃中文探知館",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Chan Sui Kau and Chan Lam Moon Chun Square": {
+        "english": "Chan Sui Kau and Chan Lam Moon Chun Square",
+        "chinese": "陳瑞球林滿珍伉儷廣場",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Chan Sui Wai Building": {
+        "english": "Chan Sui Wai Building",
+        "chinese": "陳瑞槐樓",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Chan Tai Ho Building": {
+        "english": "Chan Tai Ho Building",
+        "chinese": "陳大河樓",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Cheung On Tak Lecture Theatre": {
+        "english": "Cheung On Tak Lecture Theatre",
+        "chinese": "張安德演講廳",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Chiang Chen Studio Theatre": {
+        "english": "Chiang Chen Studio Theatre",
+        "chinese": "蔣震劇院",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Choi Kai Yau Building": {
+        "english": "Choi Kai Yau Building",
+        "chinese": "蔡繼有樓",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Chow Yei Ching Building": {
+        "english": "Chow Yei Ching Building",
+        "chinese": "周亦卿樓",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Chun Wo Classroom": {
+        "english": "Chun Wo Classroom",
+        "chinese": "俊和教室",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Chung Sze Yuen Building": {
+        "english": "Chung Sze Yuen Building",
+        "chinese": "鍾士元樓",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "CMA Building": {
+        "english": "CMA Building",
+        "chinese": "香港中華廠商聯合會樓",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Communal Building": {
+        "english": "Communal Building",
+        "chinese": "文康大樓",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Core": {
+        "english": "Core",
+        "chinese": "棟",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Daniel Koo Lecture Theatre": {
+        "english": "Daniel Koo Lecture Theatre",
+        "chinese": "古勝祥演講廳",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Dental Clinic": {
+        "english": "Dental Clinic",
+        "chinese": "牙科診所",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Dr & Mrs Lui Che Woo Centre for the Knee": {
+        "english": "Dr & Mrs Lui Che Woo Centre for the Knee",
+        "chinese": "呂志和博士伉儷膝關節康復專科中心",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Fiona Cheung Sum Yu Lecture Theatre": {
+        "english": "Fiona Cheung Sum Yu Lecture Theatre",
+        "chinese": "張心瑜演講廳",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Fong Shu Chuen Hall": {
+        "english": "Fong Shu Chuen Hall",
+        "chinese": "方樹泉堂",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Global Student Hub": {
+        "english": "Global Student Hub",
+        "chinese": "環球學生薈",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "House of Innovation": {
+        "english": "House of Innovation",
+        "chinese": "創新館",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Industrial Centre": {
+        "english": "Industrial Centre",
+        "chinese": "工業中心",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Integrative Health Clinic": {
+        "english": "Integrative Health Clinic",
+        "chinese": "結合保健診所",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Jockey Club Auditorium": {
+        "english": "Jockey Club Auditorium",
+        "chinese": "賽馬會綜藝館",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Jockey Club Innovation Tower": {
+        "english": "Jockey Club Innovation Tower",
+        "chinese": "賽馬會創新樓",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Jockey Club Rehabilitation Engineering Centre": {
+        "english": "Jockey Club Rehabilitation Engineering Centre",
+        "chinese": "賽馬會復康科技中心",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Jockey Club Smart Ageing Hub": {
+        "english": "Jockey Club Smart Ageing Hub",
+        "chinese": "賽馬會智齡匯",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Kinmay W. Tang Building": {
+        "english": "Kinmay W. Tang Building",
+        "chinese": "唐溫金美樓",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Kwong On Jubilee Sports Centre": {
+        "english": "Kwong On Jubilee Sports Centre",
+        "chinese": "廣安金禧體育中心",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Lam Chik Ho Lecture Theatre": {
+        "english": "Lam Chik Ho Lecture Theatre",
+        "chinese": "林植豪演講廳",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Lawn": {
+        "english": "Lawn",
+        "chinese": "草坪",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Lee Shau Kee Building": {
+        "english": "Lee Shau Kee Building",
+        "chinese": "李兆基樓",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Lee Wan Keung Lecture Theatre": {
+        "english": "Lee Wan Keung Lecture Theatre",
+        "chinese": "李運強演講廳",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Li Ka Shing Tower": {
+        "english": "Li Ka Shing Tower",
+        "chinese": "李嘉誠樓",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Lim Por Yen Lecture Theatres": {
+        "english": "Lim Por Yen Lecture Theatres",
+        "chinese": "林百欣演講廳",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Lu Guan Qiu Lecture Theatre": {
+        "english": "Lu Guan Qiu Lecture Theatre",
+        "chinese": "魯冠球演講廳",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Lui Che Woo Building": {
+        "english": "Lui Che Woo Building",
+        "chinese": "呂志和樓",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Michael Clinton Swimming Pool": {
+        "english": "Michael Clinton Swimming Pool",
+        "chinese": "祈廉桐游泳池",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Mong Man Wai Building": {
+        "english": "Mong Man Wai Building",
+        "chinese": "蒙民偉樓",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Ng Wing Hong Building": {
+        "english": "Ng Wing Hong Building",
+        "chinese": "伍永康樓",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Ng Wing Hong Laboratory for Sustainable City": {
+        "english": "Ng Wing Hong Laboratory for Sustainable City",
+        "chinese": "伍永康實驗室 - 可持續城市發展",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Ngan Pui Ying Lecture Theatre": {
+        "english": "Ngan Pui Ying Lecture Theatre",
+        "chinese": "顏培英演講廳",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "The Optometry Clinic": {
+        "english": "The Optometry Clinic",
+        "chinese": "眼科視光學診所",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Pao Yue-Kong Library": {
+        "english": "Pao Yue-Kong Library",
+        "chinese": "包玉剛圖書館",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Radiography Clinic": {
+        "english": "Radiography Clinic",
+        "chinese": "放射影像診所",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Realink Building": {
+        "english": "Realink Building",
+        "chinese": "匯信樓",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Rehabilitation Clinic": {
+        "english": "Rehabilitation Clinic",
+        "chinese": "康復治療診所",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Samantha Wan Lecture Theatre": {
+        "english": "Samantha Wan Lecture Theatre",
+        "chinese": "溫何寶儀演講廳",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Seal of Love Foundation Building": {
+        "english": "Seal of Love Foundation Building",
+        "chinese": "正愛慈善基金樓",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Shaw Amenities Building": {
+        "english": "Shaw Amenities Building",
+        "chinese": "邵逸夫樓",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Shaw Sports Complex": {
+        "english": "Shaw Sports Complex",
+        "chinese": "邵逸夫體育館",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Shirley Chan Building": {
+        "english": "Shirley Chan Building",
+        "chinese": "陳鮑雪瑩樓",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Stanley Ho Building": {
+        "english": "Stanley Ho Building",
+        "chinese": "何鴻燊樓",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Stephen Cheong Kam Chuen Memorial Plaza": {
+        "english": "Stephen Cheong Kam Chuen Memorial Plaza",
+        "chinese": "張鑑泉紀念廣場",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Suen Chi Sun Memorial Square": {
+        "english": "Suen Chi Sun Memorial Square",
+        "chinese": "孫志新紀念廣場",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Tang Kui Ming Lecture Theatre": {
+        "english": "Tang Kui Ming Lecture Theatre",
+        "chinese": "鄧鉅明演講廳",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Tang Ping Yuan Building": {
+        "english": "Tang Ping Yuan Building",
+        "chinese": "唐炳源樓",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "TST District Kai Fong Welfare Association Square": {
+        "english": "TST District Kai Fong Welfare Association Square",
+        "chinese": "尖沙咀街坊福利會廣場",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Tin Ka Ping Lecture Theatre": {
+        "english": "Tin Ka Ping Lecture Theatre",
+        "chinese": "田家炳演講廳",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Tsang Sze Ho Wah Lecture Theatre": {
+        "english": "Tsang Sze Ho Wah Lecture Theatre",
+        "chinese": "曾施浩華演講廳",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "University Health Service": {
+        "english": "University Health Service",
+        "chinese": "大學醫療保健處",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Wing GH": {
+        "english": "Wing GH",
+        "chinese": "GH翼",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Winnie Ko Pui Shuen Lecture Theatre": {
+        "english": "Winnie Ko Pui Shuen Lecture Theatre",
+        "chinese": "高佩璇演講廳",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Wofoo Foundation Lecture Theatre": {
+        "english": "Wofoo Foundation Lecture Theatre",
+        "chinese": "和富慈善基金演講廳",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Wong's International Lecture Theatre": {
+        "english": "Wong's International Lecture Theatre",
+        "chinese": "王氏國際演講廳",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Yip Kit Chuen Building": {
+        "english": "Yip Kit Chuen Building",
+        "chinese": "葉傑全樓",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Yu Tung Shan Lecture Theatre": {
+        "english": "Yu Tung Shan Lecture Theatre",
+        "chinese": "余統山演講廳",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Hotel ICON": {
+        "english": "Hotel ICON",
+        "chinese": "唯港薈",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Joint Sports Centre": {
+        "english": "Joint Sports Centre",
+        "chinese": "聯校運動中心",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "PolyU Hung Hom Bay Campus": {
+        "english": "PolyU Hung Hom Bay Campus",
+        "chinese": "香港理工大學紅磡灣校園",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "PolyU West Kowloon Campus": {
+        "english": "PolyU West Kowloon Campus",
+        "chinese": "香港理工大學西九龍校園",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Student Halls of Residence (Hung Hom)": {
+        "english": "Student Halls of Residence (Hung Hom)",
+        "chinese": "學生宿舍(紅磡)",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "Student Halls of Residence (Homantin)": {
+        "english": "Student Halls of Residence (Homantin)",
+        "chinese": "學生宿舍(何文田)",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "University House": {
+        "english": "University House",
+        "chinese": "大學樓",
+        "abbreviation": "",
+        "category": "Buildings & Facilities"
+    },
+    "LMS": {
+        "english": "Department of Logistics and Maritime Studies",
+        "chinese": "物流及航運學系",
+        "abbreviation": "LMS",
+        "category": "Faculties and Academic Departments"
+    },
+    "MM": {
+        "english": "Department of Management and Marketing",
+        "chinese": "管理及市場學系",
+        "abbreviation": "MM",
+        "category": "Faculties and Academic Departments"
+    },
+    "AF": {
+        "english": "School of Accounting and Finance",
+        "chinese": "會計及金融學院",
+        "abbreviation": "AF",
+        "category": "Faculties and Academic Departments"
+    },
+    "AMA": {
+        "english": "Department of Applied Mathematics",
+        "chinese": "應用數學系",
+        "abbreviation": "AMA",
+        "category": "Faculties and Academic Departments"
+    },
+    "COMP": {
+        "english": "Department of Computing",
+        "chinese": "電子計算學系",
+        "abbreviation": "COMP",
+        "category": "Faculties and Academic Departments"
+    },
+    "DSAI": {
+        "english": "Department of Data Science and Artificial Intelligence",
+        "chinese": "數據科學及人工智能學系",
+        "abbreviation": "DSAI",
+        "category": "Faculties and Academic Departments"
+    },
+    "ARCH": {
+        "english": "Department of Architecture",
+        "chinese": "建築學系",
+        "abbreviation": "ARCH",
+        "category": "Faculties and Academic Departments"
+    },
+    "BEEE": {
+        "english": "Department of Building Environment and Energy Engineering",
+        "chinese": "建築環境及能源工程學系",
+        "abbreviation": "BEEE",
+        "category": "Faculties and Academic Departments"
+    },
+    "CEE": {
+        "english": "Department of Civil and Environmental Engineering",
+        "chinese": "土木及環境工程學系",
+        "abbreviation": "CEE",
+        "category": "Faculties and Academic Departments"
+    },
+    "CMI": {
+        "english": "Department of Construction Management and Intelligence",
+        "chinese": "建設管理及智能學系",
+        "abbreviation": "CMI",
+        "category": "Faculties and Academic Departments"
+    },
+    "LSGS": {
+        "english": "Department of Land Surveying and Geospatial Science",
+        "chinese": "土地測量及地理空間科學系",
+        "abbreviation": "LSGS",
+        "category": "Faculties and Academic Departments"
+    },
+    "AAE": {
+        "english": "Department of Aeronautical and Aviation Engineering (External Department - Non-ISE)",
+        "chinese": "航空及民航工程學系 (獨立學系 - 非 ISE)",
+        "abbreviation": "AAE",
+        "category": "External Department"
+    },
+    "BME": {
+        "english": "Department of Biomedical Engineering",
+        "chinese": "生物醫學工程學系",
+        "abbreviation": "BME",
+        "category": "Faculties and Academic Departments"
+    },
+    "EEE": {
+        "english": "Department of Electrical and Electronic Engineering",
+        "chinese": "電機及電子工程學系",
+        "abbreviation": "EEE",
+        "category": "Faculties and Academic Departments"
+    },
+    "ISE": {
+        "english": "Department of Industrial and Systems Engineering / BEng (Hons) in Industrial and Systems Engineering",
+        "chinese": "工業及系統工程學系 / 工業及系統工程(榮譽)工學士",
+        "abbreviation": "ISE",
+        "programme_code": "45498-ISE / Senior Year: 45498-SYI",
+        "jupas_code": "JS3236",
+        "category": "Academic Entity / Degree Programme"
+    },
+    "ME": {
+        "english": "Department of Mechanical Engineering",
+        "chinese": "機械工程學系",
+        "abbreviation": "ME",
+        "category": "Faculties and Academic Departments"
+    },
+    "APSS": {
+        "english": "Department of Applied Social Sciences",
+        "chinese": "應用社會科學系",
+        "abbreviation": "APSS",
+        "category": "Faculties and Academic Departments"
+    },
+    "HTI": {
+        "english": "Department of Health Technology and Informatics",
+        "chinese": "醫療科技及資訊學系",
+        "abbreviation": "HTI",
+        "category": "Faculties and Academic Departments"
+    },
+    "RS": {
+        "english": "Department of Rehabilitation Sciences",
+        "chinese": "康復治療科學系",
+        "abbreviation": "RS",
+        "category": "Faculties and Academic Departments"
+    },
+    "SN": {
+        "english": "School of Nursing",
+        "chinese": "護理學院",
+        "abbreviation": "SN",
+        "category": "Faculties and Academic Departments"
+    },
+    "SO": {
+        "english": "School of Optometry",
+        "chinese": "眼科視光學院",
+        "abbreviation": "SO",
+        "category": "Faculties and Academic Departments"
+    },
+    "CHC": {
+        "english": "Department of Chinese History and Culture",
+        "chinese": "中國歷史及文化學系",
+        "abbreviation": "CHC",
+        "category": "Faculties and Academic Departments"
+    },
+    "ENGL": {
+        "english": "Department of English and Communication",
+        "chinese": "英文及傳意學系",
+        "abbreviation": "ENGL",
+        "category": "Faculties and Academic Departments"
+    },
+    "LST": {
+        "english": "Department of Language Science and Technology",
+        "chinese": "語言科學及技術學系",
+        "abbreviation": "LST",
+        "category": "Faculties and Academic Departments"
+    },
+    "AIH": {
+        "english": "Division of Artificial Intelligence and the Humanities",
+        "chinese": "人工智能與人文科學學部",
+        "abbreviation": "AIH",
+        "category": "Faculties and Academic Departments"
+    },
+    "CHEM": {
+        "english": "Department of Chemistry",
+        "chinese": "化學系",
+        "abbreviation": "CHEM",
+        "category": "Faculties and Academic Departments"
+    },
+    "FSN": {
+        "english": "Department of Food Science and Nutrition",
+        "chinese": "食品科學及營養學系",
+        "abbreviation": "FSN",
+        "category": "Faculties and Academic Departments"
+    },
+    "LS": {
+        "english": "Department of Life Sciences",
+        "chinese": "生命科學系",
+        "abbreviation": "LS",
+        "category": "Faculties and Academic Departments"
+    },
+    "PM": {
+        "english": "Department of Physics and Materials",
+        "chinese": "物理及材料學系",
+        "abbreviation": "PM",
+        "category": "Faculties and Academic Departments"
+    },
+    "Bachelor of Arts (Honours) [BA(Hons)]": {
+        "english": "Bachelor of Arts (Honours) [BA(Hons)]",
+        "chinese": "（榮譽）文學士",
+        "abbreviation": "",
+        "category": "Academic Awards"
+    },
+    "Bachelor of Business Administration (Honours) [BBA(Hons)]": {
+        "english": "Bachelor of Business Administration (Honours) [BBA(Hons)]",
+        "chinese": "（榮譽）工商管理學士",
+        "abbreviation": "",
+        "category": "Academic Awards"
+    },
+    "Bachelor of Engineering (Honours) [BEng(Hons)]": {
+        "english": "Bachelor of Engineering (Honours) [BEng(Hons)]",
+        "chinese": "（榮譽）工學士",
+        "abbreviation": "",
+        "category": "Academic Awards"
+    },
+    "Bachelor of Science (Honours) [BSc(Hons)]": {
+        "english": "Bachelor of Science (Honours) [BSc(Hons)]",
+        "chinese": "（榮譽）理學士",
+        "abbreviation": "",
+        "category": "Academic Awards"
+    },
+    "Doctor of Applied Language Sciences [DALS]": {
+        "english": "Doctor of Applied Language Sciences [DALS]",
+        "chinese": "應用語言科學博士",
+        "abbreviation": "",
+        "category": "Academic Awards"
+    },
+    "Doctor of Business Administration [DBA]": {
+        "english": "Doctor of Business Administration [DBA]",
+        "chinese": "工商管理博士",
+        "abbreviation": "",
+        "category": "Academic Awards"
+    },
+    "Doctor of FinTech [DFinTech]": {
+        "english": "Doctor of FinTech [DFinTech]",
+        "chinese": "金融科技博士",
+        "abbreviation": "",
+        "category": "Academic Awards"
+    },
+    "Doctor of Health Science [DHSc]": {
+        "english": "Doctor of Health Science [DHSc]",
+        "chinese": "醫療科學博士",
+        "abbreviation": "",
+        "category": "Academic Awards"
+    },
+    "Doctor of Hotel and Tourism Management [DHTM]": {
+        "english": "Doctor of Hotel and Tourism Management [DHTM]",
+        "chinese": "酒店及旅遊管理博士",
+        "abbreviation": "",
+        "category": "Academic Awards"
+    },
+    "Doctor of Management [DMgt]": {
+        "english": "Doctor of Management [DMgt]",
+        "chinese": "管理學博士",
+        "abbreviation": "",
+        "category": "Academic Awards"
+    },
+    "Doctor of Philosophy [PhD]": {
+        "english": "Doctor of Philosophy [PhD]",
+        "chinese": "哲學博士",
+        "abbreviation": "",
+        "category": "Academic Awards"
+    },
+    "Doctor of Social Work [DSW]": {
+        "english": "Doctor of Social Work [DSW]",
+        "chinese": "社會工作博士",
+        "abbreviation": "",
+        "category": "Academic Awards"
+    },
+    "Engineering Doctorate [EngD]": {
+        "english": "Engineering Doctorate [EngD]",
+        "chinese": "工程學博士",
+        "abbreviation": "",
+        "category": "Academic Awards"
+    },
+    "Doctor of Business Administration honoris causa": {
+        "english": "Doctor of Business Administration honoris causa",
+        "chinese": "榮譽工商管理博士",
+        "abbreviation": "",
+        "category": "Academic Awards"
+    },
+    "Doctor of Design honoris causa": {
+        "english": "Doctor of Design honoris causa",
+        "chinese": "榮譽設計學博士",
+        "abbreviation": "",
+        "category": "Academic Awards"
+    },
+    "Doctor of Engineering honoris causa": {
+        "english": "Doctor of Engineering honoris causa",
+        "chinese": "榮譽工程學博士",
+        "abbreviation": "",
+        "category": "Academic Awards"
+    },
+    "Doctor of Humanities honoris causa": {
+        "english": "Doctor of Humanities honoris causa",
+        "chinese": "榮譽人文學博士",
+        "abbreviation": "",
+        "category": "Academic Awards"
+    },
+    "Doctor of Laws honoris causa": {
+        "english": "Doctor of Laws honoris causa",
+        "chinese": "榮譽法學博士",
+        "abbreviation": "",
+        "category": "Academic Awards"
+    },
+    "Doctor of Letters honoris causa": {
+        "english": "Doctor of Letters honoris causa",
+        "chinese": "榮譽文學博士",
+        "abbreviation": "",
+        "category": "Academic Awards"
+    },
+    "Doctor of Science honoris causa": {
+        "english": "Doctor of Science honoris causa",
+        "chinese": "榮譽理學博士",
+        "abbreviation": "",
+        "category": "Academic Awards"
+    },
+    "Doctor of Social Science honoris causa": {
+        "english": "Doctor of Social Science honoris causa",
+        "chinese": "榮譽社會科學博士",
+        "abbreviation": "",
+        "category": "Academic Awards"
+    },
+    "Doctor of Technology honoris causa": {
+        "english": "Doctor of Technology honoris causa",
+        "chinese": "榮譽科技博士",
+        "abbreviation": "",
+        "category": "Academic Awards"
+    },
+    "University Fellow": {
+        "english": "University Fellow",
+        "chinese": "大學院士",
+        "abbreviation": "",
+        "category": "Academic Awards"
+    },
+    "Master of Applied Psychology [MAP]": {
+        "english": "Master of Applied Psychology [MAP]",
+        "chinese": "應用心理學碩士",
+        "abbreviation": "",
+        "category": "Academic Awards"
+    },
+    "Master of Arts [MA]": {
+        "english": "Master of Arts [MA]",
+        "chinese": "文學碩士",
+        "abbreviation": "",
+        "category": "Academic Awards"
+    },
+    "Master of Business Administration [MBA]": {
+        "english": "Master of Business Administration [MBA]",
+        "chinese": "工商管理碩士",
+        "abbreviation": "",
+        "category": "Academic Awards"
+    },
+    "Master of Corporate Governance [MCG]": {
+        "english": "Master of Corporate Governance [MCG]",
+        "chinese": "公司管治碩士",
+        "abbreviation": "",
+        "category": "Academic Awards"
+    },
+    "Master of Design [MDes]": {
+        "english": "Master of Design [MDes]",
+        "chinese": "設計學碩士",
+        "abbreviation": "",
+        "category": "Academic Awards"
+    },
+    "Master of Educational and Child Psychology [MECP]": {
+        "english": "Master of Educational and Child Psychology [MECP]",
+        "chinese": "教育及兒童心理學碩士",
+        "abbreviation": "",
+        "category": "Academic Awards"
+    },
+    "Master of Engineering [MEng]": {
+        "english": "Master of Engineering [MEng]",
+        "chinese": "工學碩士",
+        "abbreviation": "",
+        "category": "Academic Awards"
+    },
+    "Master of Finance [MoF]": {
+        "english": "Master of Finance [MoF]",
+        "chinese": "財務學碩士",
+        "abbreviation": "",
+        "category": "Academic Awards"
+    },
+    "Master of Nursing [MN]": {
+        "english": "Master of Nursing [MN]",
+        "chinese": "護理學碩士",
+        "abbreviation": "",
+        "category": "Academic Awards"
+    },
+    "Master in Occupational Therapy [MOT]": {
+        "english": "Master in Occupational Therapy [MOT]",
+        "chinese": "職業治療碩士",
+        "abbreviation": "",
+        "category": "Academic Awards"
+    },
+    "Master of Professional Accounting [MPAcc]": {
+        "english": "Master of Professional Accounting [MPAcc]",
+        "chinese": "專業會計碩士（會計學碩士*）",
+        "abbreviation": "",
+        "category": "Academic Awards"
+    },
+    "Master in Physiotherapy": {
+        "english": "Master in Physiotherapy",
+        "chinese": "物理治療學碩士",
+        "abbreviation": "",
+        "category": "Academic Awards"
+    },
+    "Master of Philosophy [MPhil]": {
+        "english": "Master of Philosophy [MPhil]",
+        "chinese": "哲學碩士",
+        "abbreviation": "",
+        "category": "Academic Awards"
+    },
+    "Master of Science [MSc]": {
+        "english": "Master of Science [MSc]",
+        "chinese": "理學碩士",
+        "abbreviation": "",
+        "category": "Academic Awards"
+    },
+    "Master of Social Work [MSW]": {
+        "english": "Master of Social Work [MSW]",
+        "chinese": "社會工作碩士",
+        "abbreviation": "",
+        "category": "Academic Awards"
+    },
+    "Master of Speech Therapy [MST]": {
+        "english": "Master of Speech Therapy [MST]",
+        "chinese": "言語治療碩士",
+        "abbreviation": "",
+        "category": "Academic Awards"
+    },
+    "Postgraduate Certificate [PgC]": {
+        "english": "Postgraduate Certificate [PgC]",
+        "chinese": "深造證書",
+        "abbreviation": "",
+        "category": "Academic Awards"
+    },
+    "Postgraduate Diploma [PgD]": {
+        "english": "Postgraduate Diploma [PgD]",
+        "chinese": "深造文憑",
+        "abbreviation": "",
+        "category": "Academic Awards"
+    },
+    "Associate Degree": {
+        "english": "Associate Degree",
+        "chinese": "副學士",
+        "abbreviation": "",
+        "category": "Academic Awards"
+    },
+    "Higher Diploma": {
+        "english": "Higher Diploma",
+        "chinese": "高級文憑",
+        "abbreviation": "",
+        "category": "Academic Awards"
+    },
+    "Full-time [FT]": {
+        "english": "Full-time [FT]",
+        "chinese": "全日制",
+        "abbreviation": "",
+        "category": "Academic Awards"
+    },
+    "Part-time [PT]": {
+        "english": "Part-time [PT]",
+        "chinese": "兼讀制",
+        "abbreviation": "",
+        "category": "Academic Awards"
+    },
+    "Part-time evening [PTE]": {
+        "english": "Part-time evening [PTE]",
+        "chinese": "夜校兼讀制",
+        "abbreviation": "",
+        "category": "Academic Awards"
+    },
+    "Mixed-mode [MM]": {
+        "english": "Mixed-mode [MM]",
+        "chinese": "混合制（全日或兼讀）",
+        "abbreviation": "",
+        "category": "Academic Awards"
+    },
+    "On-line study [OL]": {
+        "english": "On-line study [OL]",
+        "chinese": "網上修課",
+        "abbreviation": "",
+        "category": "Academic Awards"
+    },
+    "Sandwich [SAND]": {
+        "english": "Sandwich [SAND]",
+        "chinese": "廠校交替制",
+        "abbreviation": "",
+        "category": "Academic Awards"
+    },
+    "Self-financed programmes": {
+        "english": "Self-financed programmes",
+        "chinese": "自負盈虧課程",
+        "abbreviation": "",
+        "category": "Academic Awards"
+    },
+    "UGC-funded programmes": {
+        "english": "UGC-funded programmes",
+        "chinese": "教資會資助課程",
+        "abbreviation": "",
+        "category": "Academic Awards"
+    },
+    "Council": {
+        "english": "Council",
+        "chinese": "校董會",
+        "abbreviation": "",
+        "category": "Boards, Committees and Related Bodies"
+    },
+    "University Court": {
+        "english": "University Court",
+        "chinese": "大學顧問委員會",
+        "abbreviation": "",
+        "category": "Boards, Committees and Related Bodies"
+    },
+    "Senate": {
+        "english": "Senate",
+        "chinese": "教務委員會",
+        "abbreviation": "",
+        "category": "Boards, Committees and Related Bodies"
+    },
+    "Audit Committee": {
+        "english": "Audit Committee",
+        "chinese": "審核委員會",
+        "abbreviation": "",
+        "category": "Boards, Committees and Related Bodies"
+    },
+    "Campus Development Committee": {
+        "english": "Campus Development Committee",
+        "chinese": "校園發展委員會",
+        "abbreviation": "",
+        "category": "Boards, Committees and Related Bodies"
+    },
+    "Council Membership Nominations Committee": {
+        "english": "Council Membership Nominations Committee",
+        "chinese": "校董會成員提名委員會",
+        "abbreviation": "",
+        "category": "Boards, Committees and Related Bodies"
+    },
+    "Disciplinary Committee": {
+        "english": "Disciplinary Committee",
+        "chinese": "紀律委員會",
+        "abbreviation": "",
+        "category": "Boards, Committees and Related Bodies"
+    },
+    "Executive Committee": {
+        "english": "Executive Committee",
+        "chinese": "常務委員會",
+        "abbreviation": "",
+        "category": "Boards, Committees and Related Bodies"
+    },
+    "Finance Committee": {
+        "english": "Finance Committee",
+        "chinese": "財務委員會",
+        "abbreviation": "",
+        "category": "Boards, Committees and Related Bodies"
+    },
+    "Governance Committee": {
+        "english": "Governance Committee",
+        "chinese": "管治委員會",
+        "abbreviation": "",
+        "category": "Boards, Committees and Related Bodies"
+    },
+    "Honorary Degrees and Awards Committee": {
+        "english": "Honorary Degrees and Awards Committee",
+        "chinese": "榮譽學位及榮銜委員會",
+        "abbreviation": "",
+        "category": "Boards, Committees and Related Bodies"
+    },
+    "Investment Committee": {
+        "english": "Investment Committee",
+        "chinese": "投資委員會",
+        "abbreviation": "",
+        "category": "Boards, Committees and Related Bodies"
+    },
+    "Knowledge Transfer Committee": {
+        "english": "Knowledge Transfer Committee",
+        "chinese": "知識轉移委員會",
+        "abbreviation": "",
+        "category": "Boards, Committees and Related Bodies"
+    },
+    "Senior Executives Evaluation and Compensation Committee": {
+        "english": "Senior Executives Evaluation and Compensation Committee",
+        "chinese": "管理層評核及薪酬委員會",
+        "abbreviation": "",
+        "category": "Boards, Committees and Related Bodies"
+    },
+    "Staffing Committee": {
+        "english": "Staffing Committee",
+        "chinese": "聘任事務委員會",
+        "abbreviation": "",
+        "category": "Boards, Committees and Related Bodies"
+    },
+    "The Hong Kong Polytechnic University Foundation": {
+        "english": "The Hong Kong Polytechnic University Foundation",
+        "chinese": "香港理工大學基金",
+        "abbreviation": "",
+        "category": "Boards, Committees and Related Bodies"
+    },
+    "Academic Appeals Committee": {
+        "english": "Academic Appeals Committee",
+        "chinese": "教務申訴委員會",
+        "abbreviation": "",
+        "category": "Boards, Committees and Related Bodies"
+    },
+    "Academic Planning and Regulations Committee": {
+        "english": "Academic Planning and Regulations Committee",
+        "chinese": "教務策劃及規章委員會",
+        "abbreviation": "",
+        "category": "Boards, Committees and Related Bodies"
+    },
+    "Faculty Boards": {
+        "english": "Faculty Boards",
+        "chinese": "院務委員會",
+        "abbreviation": "",
+        "category": "Boards, Committees and Related Bodies"
+    },
+    "Centre for Innovation in Language Teaching and Learning": {
+        "english": "Centre for Innovation in Language Teaching and Learning",
+        "chinese": "語言教學創新中心",
+        "abbreviation": "",
+        "category": "Other Departments/Offices/Units"
+    },
+    "Graduate School Board": {
+        "english": "Graduate School Board",
+        "chinese": "研究生院院務委員會",
+        "abbreviation": "",
+        "category": "Boards, Committees and Related Bodies"
+    },
+    "Learning and Teaching Committee": {
+        "english": "Learning and Teaching Committee",
+        "chinese": "教學委員會",
+        "abbreviation": "",
+        "category": "Boards, Committees and Related Bodies"
+    },
+    "Academic Quality Assurance Committee": {
+        "english": "Academic Quality Assurance Committee",
+        "chinese": "學術質素保證委員會",
+        "abbreviation": "",
+        "category": "Boards, Committees and Related Bodies"
+    },
+    "Research Committee": {
+        "english": "Research Committee",
+        "chinese": "研究委員會",
+        "abbreviation": "",
+        "category": "Boards, Committees and Related Bodies"
+    },
+    "Budget and Resources Committee": {
+        "english": "Budget and Resources Committee",
+        "chinese": "資源統籌委員會",
+        "abbreviation": "",
+        "category": "Boards, Committees and Related Bodies"
+    },
+    "Global Engagement Committee": {
+        "english": "Global Engagement Committee",
+        "chinese": "環球事務委員會",
+        "abbreviation": "",
+        "category": "Boards, Committees and Related Bodies"
+    },
+    "Grievance Committee": {
+        "english": "Grievance Committee",
+        "chinese": "申訴委員會",
+        "abbreviation": "",
+        "category": "Boards, Committees and Related Bodies"
+    },
+    "Knowledge Transfer Steering Committee": {
+        "english": "Knowledge Transfer Steering Committee",
+        "chinese": "知識轉移督導委員會",
+        "abbreviation": "",
+        "category": "Boards, Committees and Related Bodies"
+    },
+    "President's Executive Committee": {
+        "english": "President's Executive Committee",
+        "chinese": "校長行政委員會",
+        "abbreviation": "",
+        "category": "Boards, Committees and Related Bodies"
+    },
+    "Resources Advancement and Management Committee": {
+        "english": "Resources Advancement and Management Committee",
+        "chinese": "資源拓展及管理委員會",
+        "abbreviation": "",
+        "category": "Boards, Committees and Related Bodies"
+    },
+    "Review Committee on Human Resources Decisions": {
+        "english": "Review Committee on Human Resources Decisions",
+        "chinese": "人力資源決策審查委員會",
+        "abbreviation": "",
+        "category": "Boards, Committees and Related Bodies"
+    },
+    "Staff Discipline Committee": {
+        "english": "Staff Discipline Committee",
+        "chinese": "教職員紀律委員會",
+        "abbreviation": "",
+        "category": "Boards, Committees and Related Bodies"
+    },
+    "Student Development and Affairs Committee": {
+        "english": "Student Development and Affairs Committee",
+        "chinese": "學生發展及事務委員會",
+        "abbreviation": "",
+        "category": "Boards, Committees and Related Bodies"
+    },
+    "Advisory Committee on Appointment of Chair Professors under the Distinguished Chair Professor Scheme": {
+        "english": "Advisory Committee on Appointment of Chair Professors under the Distinguished Chair Professor Scheme",
+        "chinese": "傑出講座教授聘任顧問委員會",
+        "abbreviation": "",
+        "category": "Boards, Committees and Related Bodies"
+    },
+    "Faculty/School International Advisory Board": {
+        "english": "Faculty/School International Advisory Board",
+        "chinese": "學院國際顧問委員會",
+        "abbreviation": "",
+        "category": "Boards, Committees and Related Bodies"
+    },
+    "International Advisory Board": {
+        "english": "International Advisory Board",
+        "chinese": "國際顧問委員會",
+        "abbreviation": "",
+        "category": "Boards, Committees and Related Bodies"
+    },
+    "Strategic Academic Appointments and Development Committee": {
+        "english": "Strategic Academic Appointments and Development Committee",
+        "chinese": "策略學術聘任與發展委員會",
+        "abbreviation": "",
+        "category": "Boards, Committees and Related Bodies"
+    },
+    "Students’ Union Consultative Group": {
+        "english": "Students’ Union Consultative Group",
+        "chinese": "學生諮詢委員會",
+        "abbreviation": "",
+        "category": "Boards, Committees and Related Bodies"
+    },
+    "Academic Council": {
+        "english": "Academic Council",
+        "chinese": "學術政策委員會",
+        "abbreviation": "",
+        "category": "Boards, Committees and Related Bodies"
+    },
+    "Appointments Committees": {
+        "english": "Appointments Committees",
+        "chinese": "聘任委員會",
+        "abbreviation": "",
+        "category": "Boards, Committees and Related Bodies"
+    },
+    "Areas of Excellence Committee": {
+        "english": "Areas of Excellence Committee",
+        "chinese": "卓越學術領域委員會",
+        "abbreviation": "",
+        "category": "Boards, Committees and Related Bodies"
+    },
+    "Campus Development and Space Allocation Committee": {
+        "english": "Campus Development and Space Allocation Committee",
+        "chinese": "校園發展及校舍分配委員會",
+        "abbreviation": "",
+        "category": "Boards, Committees and Related Bodies"
+    },
+    "Campus Sustainability Committee": {
+        "english": "Campus Sustainability Committee",
+        "chinese": "校園可持續發展委員會",
+        "abbreviation": "",
+        "category": "Boards, Committees and Related Bodies"
+    },
+    "Culture Promotion Committee": {
+        "english": "Culture Promotion Committee",
+        "chinese": "文化推廣委員會",
+        "abbreviation": "",
+        "category": "Boards, Committees and Related Bodies"
+    },
+    "Departmental Advisory Committees": {
+        "english": "Departmental Advisory Committees",
+        "chinese": "學系顧問委員會",
+        "abbreviation": "",
+        "category": "Boards, Committees and Related Bodies"
+    },
+    "Entrepreneurial Programmes Management Committee": {
+        "english": "Entrepreneurial Programmes Management Committee",
+        "chinese": "創業計劃管理委員會",
+        "abbreviation": "",
+        "category": "Boards, Committees and Related Bodies"
+    },
+    "Equipment and General Purchases Tender Committee": {
+        "english": "Equipment and General Purchases Tender Committee",
+        "chinese": "採購招標委員會",
+        "abbreviation": "",
+        "category": "Boards, Committees and Related Bodies"
+    },
+    "Ethics, Diversity and Inclusion Committee": {
+        "english": "Ethics, Diversity and Inclusion Committee",
+        "chinese": "操守及多元共融委員會",
+        "abbreviation": "",
+        "category": "Boards, Committees and Related Bodies"
+    },
+    "Health and Safety Committee": {
+        "english": "Health and Safety Committee",
+        "chinese": "健康及安全委員會",
+        "abbreviation": "",
+        "category": "Boards, Committees and Related Bodies"
+    },
+    "Information Services Steering Committee": {
+        "english": "Information Services Steering Committee",
+        "chinese": "資訊服務督導委員會",
+        "abbreviation": "",
+        "category": "Boards, Committees and Related Bodies"
+    },
+    "PUSA Consultative Group": {
+        "english": "PUSA Consultative Group",
+        "chinese": "教職員協會諮詢委員會",
+        "abbreviation": "",
+        "category": "Boards, Committees and Related Bodies"
+    },
+    "Student Discipline Committee": {
+        "english": "Student Discipline Committee",
+        "chinese": "學生紀律委員會",
+        "abbreviation": "",
+        "category": "Boards, Committees and Related Bodies"
+    },
+    "Technology Transfer Management Committee": {
+        "english": "Technology Transfer Management Committee",
+        "chinese": "技術轉移管理委員會",
+        "abbreviation": "",
+        "category": "Boards, Committees and Related Bodies"
+    },
+    "Hong Kong Community College (HKCC)": {
+        "english": "Hong Kong Community College (HKCC)",
+        "chinese": "香港專上學院",
+        "abbreviation": "",
+        "category": "College of Professional and Continuing Education"
+    },
+    "School of Professional Education and Executive Development (SPEED)": {
+        "english": "School of Professional Education and Executive Development (SPEED)",
+        "chinese": "專業進修學院",
+        "abbreviation": "",
+        "category": "College of Professional and Continuing Education"
+    },
+    "Offices of the President": {
+        "english": "Offices of the President",
+        "chinese": "校長室",
+        "abbreviation": "",
+        "category": "Other Departments/Offices/Units"
+    },
+    "AR": {
+        "english": "Academic Registry",
+        "chinese": "教務處",
+        "abbreviation": "AR",
+        "category": "Other Departments/Offices/Units"
+    },
+    "AAO": {
+        "english": "Alumni Affairs Office",
+        "chinese": "校友事務處",
+        "abbreviation": "AAO",
+        "category": "Other Departments/Offices/Units"
+    },
+    "CDO": {
+        "english": "Campus Development Office",
+        "chinese": "校園發展處",
+        "abbreviation": "CDO",
+        "category": "Other Departments/Offices/Units"
+    },
+    "CFSO": {
+        "english": "Campus Facilities and Sustainability Office",
+        "chinese": "設施及可持續校園處",
+        "abbreviation": "CFSO",
+        "category": "Other Departments/Offices/Units"
+    },
+    "Student Affairs Office": {
+        "english": "Student Affairs Office",
+        "chinese": "學生事務處",
+        "abbreviation": "SAO",
+        "category": "Other Departments/Offices/Units"
+    },
+    "CPS": {
+        "english": "Careers and Placement Section",
+        "chinese": "職業及就業導向組",
+        "abbreviation": "CPS",
+        "category": "Other Departments/Offices/Units"
+    },
+    "CWS": {
+        "english": "Counselling and Wellness Section",
+        "chinese": "輔導及心理健康組",
+        "abbreviation": "CWS",
+        "category": "Other Departments/Offices/Units"
+    },
+    "SDU": {
+        "english": "Student Development Unit",
+        "chinese": "學生發展組",
+        "abbreviation": "SDU",
+        "category": "Other Departments/Offices/Units"
+    },
+    "SRSS": {
+        "english": "Student Resources and Support Section",
+        "chinese": "學生資源及支援組",
+        "abbreviation": "SRSS",
+        "category": "Other Departments/Offices/Units"
+    },
+    "CPA": {
+        "english": "Communications and Public Affairs Office",
+        "chinese": "傳訊及公共事務處",
+        "abbreviation": "CPA",
+        "category": "Other Departments/Offices/Units"
+    },
+    "CIHK": {
+        "english": "Confucius Institute of Hong Kong",
+        "chinese": "香港孔子學院",
+        "abbreviation": "CIHK",
+        "category": "Other Departments/Offices/Units"
+    },
+    "CCS": {
+        "english": "Council and Court Secretariat",
+        "chinese": "校董會及顧問委員會秘書處",
+        "abbreviation": "CCS",
+        "category": "Other Departments/Offices/Units"
+    },
+    "CPEO": {
+        "english": "Culture Promotion and Events Office",
+        "chinese": "文化及設施推廣處",
+        "abbreviation": "CPEO",
+        "category": "Other Departments/Offices/Units"
+    },
+    "EDC": {
+        "english": "Educational Development Centre",
+        "chinese": "教學發展中心",
+        "abbreviation": "EDC",
+        "category": "Other Departments/Offices/Units"
+    },
+    "ERC": {
+        "english": "Educational Research Centre",
+        "chinese": "教育研究中心",
+        "abbreviation": "ERC",
+        "category": "Other Departments/Offices/Units"
+    },
+    "FO": {
+        "english": "Finance Office",
+        "chinese": "財務處",
+        "abbreviation": "FO",
+        "category": "Other Departments/Offices/Units"
+    },
+    "GEO": {
+        "english": "Global Engagement Office",
+        "chinese": "環球事務處",
+        "abbreviation": "GEO",
+        "category": "Other Departments/Offices/Units"
+    },
+    "HSO": {
+        "english": "Health and Safety Office",
+        "chinese": "健康及安全事務處",
+        "abbreviation": "HSO",
+        "category": "Other Departments/Offices/Units"
+    },
+    "HRO": {
+        "english": "Human Resources Office",
+        "chinese": "人力資源處",
+        "abbreviation": "HRO",
+        "category": "Other Departments/Offices/Units"
+    },
+    "IC": {
+        "english": "Industrial Centre",
+        "chinese": "工業中心",
+        "abbreviation": "IC",
+        "category": "Other Departments/Offices/Units"
+    },
+    "ITS": {
+        "english": "Information Technology Services Office",
+        "chinese": "資訊科技處",
+        "abbreviation": "ITS",
+        "category": "Other Departments/Offices/Units"
+    },
+    "IHERD": {
+        "english": "Institute for Higher Education Research and Development",
+        "chinese": "高等教育研究及發展院",
+        "abbreviation": "IHERD",
+        "category": "Other Departments/Offices/Units"
+    },
+    "IAEE": {
+        "english": "Institute of Advanced Executive Education",
+        "chinese": "高級管理深造學院",
+        "abbreviation": "IAEE",
+        "category": "Other Departments/Offices/Units"
+    },
+    "IPAO": {
+        "english": "Institutional Planning and Analytics Office",
+        "chinese": "大學策劃處",
+        "abbreviation": "IPAO",
+        "category": "Other Departments/Offices/Units"
+    },
+    "IAU": {
+        "english": "Internal Audit Unit",
+        "chinese": "內部稽核組",
+        "abbreviation": "IAU",
+        "category": "Other Departments/Offices/Units"
+    },
+    "J.C.DISI": {
+        "english": "Jockey Club Design Institute for Social Innovation",
+        "chinese": "賽馬會創新設計院",
+        "abbreviation": "J.C.DISI",
+        "category": "Other Departments/Offices/Units"
+    },
+    "KTEO": {
+        "english": "Knowledge Transfer and Entrepreneurship Office",
+        "chinese": "知識轉移及創業處",
+        "abbreviation": "KTEO",
+        "category": "Other Departments/Offices/Units"
+    },
+    "TELEC": {
+        "english": "Technology-Enhanced Language Education Centre",
+        "chinese": "科技語言教學中心",
+        "abbreviation": "TELEC",
+        "category": "Other Departments/Offices/Units"
+    },
+    "CLC": {
+        "english": "Chinese Language Centre",
+        "chinese": "中國語文教學中心",
+        "abbreviation": "CLC",
+        "category": "Other Departments/Offices/Units"
+    },
+    "ELC": {
+        "english": "English Language Centre",
+        "chinese": "英語教學中心",
+        "abbreviation": "ELC",
+        "category": "Other Departments/Offices/Units"
+    },
+    "MDO": {
+        "english": "Mainland Development Office",
+        "chinese": "內地發展處",
+        "abbreviation": "MDO",
+        "category": "Other Departments/Offices/Units"
+    },
+    "OIA": {
+        "english": "Office of Institutional Advancement",
+        "chinese": "拓展事務處",
+        "abbreviation": "OIA",
+        "category": "Other Departments/Offices/Units"
+    },
+    "OUS": {
+        "english": "Office of Undergraduate Studies",
+        "chinese": "本科生學務處",
+        "abbreviation": "OUS",
+        "category": "Other Departments/Offices/Units"
+    },
+    "LIB": {
+        "english": "Pao Yue-Kong Library",
+        "chinese": "包玉剛圖書館",
+        "abbreviation": "LIB",
+        "category": "Other Departments/Offices/Units"
+    },
+    "PRESS": {
+        "english": "The Hong Kong Polytechnic University Press",
+        "chinese": "香港理工大學出版社",
+        "abbreviation": "PRESS",
+        "category": "Other Departments/Offices/Units"
+    },
+    "RIO": {
+        "english": "Research and Innovation Office",
+        "chinese": "研究及創新事務處",
+        "abbreviation": "RIO",
+        "category": "Other Departments/Offices/Units"
+    },
+    "SLLO": {
+        "english": "Service-Learning and Leadership Office",
+        "chinese": "服務學習及領導才能發展處",
+        "abbreviation": "SLLO",
+        "category": "Other Departments/Offices/Units"
+    },
+    "SASO": {
+        "english": "Student Admissions and Scholarships Office",
+        "chinese": "招生及奬學金事務處",
+        "abbreviation": "SASO",
+        "category": "Other Departments/Offices/Units"
+    },
+    "UHS": {
+        "english": "University Health Service",
+        "chinese": "大學醫療保健處",
+        "abbreviation": "UHS",
+        "category": "Other Departments/Offices/Units"
+    },
+    "Chancellor": {
+        "english": "Chancellor",
+        "chinese": "校監",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Chairman of Council": {
+        "english": "Chairman of Council",
+        "chinese": "校董會主席",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Deputy Chairman of Council": {
+        "english": "Deputy Chairman of Council",
+        "chinese": "校董會副主席",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Treasurer": {
+        "english": "Treasurer",
+        "chinese": "大學司庫",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "P": {
+        "english": "President",
+        "chinese": "校長",
+        "abbreviation": "P",
+        "category": "Post titles"
+    },
+    "DP": {
+        "english": "Deputy President and Provost",
+        "chinese": "常務及學務副校長",
+        "abbreviation": "DP",
+        "category": "Post titles"
+    },
+    "SVP(RI)": {
+        "english": "Senior Vice President (Research and Innovation)",
+        "chinese": "高級副校長(研究及創新)",
+        "abbreviation": "SVP(RI)",
+        "category": "Post titles"
+    },
+    "VP(AD)": {
+        "english": "Vice President (Administration and Development)",
+        "chinese": "副校長(行政及拓展)",
+        "abbreviation": "VP(AD)",
+        "category": "Post titles"
+    },
+    "VP(CF)": {
+        "english": "Vice President (Campus and Facilities)",
+        "chinese": "副校長（校園及設施）",
+        "abbreviation": "VP(CF)",
+        "category": "Post titles"
+    },
+    "VP(EDU)": {
+        "english": "Vice President (Education)",
+        "chinese": "副校長（教學）",
+        "abbreviation": "VP(EDU)",
+        "category": "Post titles"
+    },
+    "VP(KT)": {
+        "english": "Vice President (Knowledge Transfer)",
+        "chinese": "副校長（知識轉移）",
+        "abbreviation": "VP(KT)",
+        "category": "Post titles"
+    },
+    "VP(R)": {
+        "english": "Vice President (Research)",
+        "chinese": "副校長（研究）",
+        "abbreviation": "VP(R)",
+        "category": "Post titles"
+    },
+    "VP(SGA)": {
+        "english": "Vice President (Student and Global Affairs)",
+        "chinese": "副校長（學生及環球事務）",
+        "abbreviation": "VP(SGA)",
+        "category": "Post titles"
+    },
+    "AVP(CF)": {
+        "english": "Associate Vice President (Campus and Facilities)",
+        "chinese": "協理副校長（校園及設施）",
+        "abbreviation": "AVP(CF)",
+        "category": "Post titles"
+    },
+    "AVP(GP)": {
+        "english": "Associate Vice President (Global Partnerships)",
+        "chinese": "協理副校長（環球合作）",
+        "abbreviation": "AVP(GP)",
+        "category": "Post titles"
+    },
+    "AVP(KT)": {
+        "english": "Associate Vice President (Knowledge Transfer)",
+        "chinese": "協理副校長(知識轉移)",
+        "abbreviation": "AVP(KT)",
+        "category": "Post titles"
+    },
+    "AVP(R)": {
+        "english": "Associate Vice President (Research)",
+        "chinese": "協理副校長（研究）",
+        "abbreviation": "AVP(R)",
+        "category": "Post titles"
+    },
+    "AVP(UP)": {
+        "english": "Associate Vice President (Undergraduate Programme)",
+        "chinese": "協理副校長（本科生課程）",
+        "abbreviation": "AVP(UP)",
+        "category": "Post titles"
+    },
+    "CAIO": {
+        "english": "Chief Artificial Intelligence Officer",
+        "chinese": "首席人工智能官",
+        "abbreviation": "CAIO",
+        "category": "Post titles"
+    },
+    "Dean of College of Undergraduate Studies": {
+        "english": "Dean of College of Undergraduate Studies",
+        "chinese": "本科生學院院長",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Dean of Faculty": {
+        "english": "Dean of Faculty",
+        "chinese": "院長",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Dean of School of Design": {
+        "english": "Dean of School of Design",
+        "chinese": "設計學院院長",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Dean of School of Fashion and Textiles": {
+        "english": "Dean of School of Fashion and Textiles",
+        "chinese": "時裝及紡織學院院長",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Dean of School of Hotel and Tourism Management": {
+        "english": "Dean of School of Hotel and Tourism Management",
+        "chinese": "酒店及旅遊業管理學院院長",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Dean of Students": {
+        "english": "Dean of Students",
+        "chinese": "學務長",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Dean (Professional and Continuing Education)": {
+        "english": "Dean (Professional and Continuing Education)",
+        "chinese": "院長（專業及持續教育）",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Dean of Graduate School": {
+        "english": "Dean of Graduate School",
+        "chinese": "研究生院院長",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Assistant Dean of Faculty / School": {
+        "english": "Assistant Dean of Faculty / School",
+        "chinese": "助理院長 / 助理學院院長（只適用於SD, SFT, SHTM）",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Associate Dean of Faculty / School": {
+        "english": "Associate Dean of Faculty / School",
+        "chinese": "副院長 / 副學院院長（只適用於SD, SFT, SHTM）",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Associate Dean of Students": {
+        "english": "Associate Dean of Students",
+        "chinese": "副學務長",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Associate Director of Language Education Institute": {
+        "english": "Associate Director of Language Education Institute",
+        "chinese": "語言教學部副院長",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Associate Director of PolyU Academy for Interdisciplinary Research": {
+        "english": "Associate Director of PolyU Academy for Interdisciplinary Research",
+        "chinese": "香港理工大學高等研究院副院長",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Associate Director of PolyU Aerospace Research Academy": {
+        "english": "Associate Director of PolyU Aerospace Research Academy",
+        "chinese": "香港理工大學航空航天高等研究院副院長",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Head of Academic Department / School": {
+        "english": "Head of Academic Department / School",
+        "chinese": "系主任 / 學院主任（只適用於AF, SN, SO ）",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Associate Head of Academic Department / School": {
+        "english": "Associate Head of Academic Department / School",
+        "chinese": "副系主任 / 副學院主任（只適用於AF, SN, SO ）",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of Alumni Affairs": {
+        "english": "Director of Alumni Affairs",
+        "chinese": "校友事務總監",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of Campus Development": {
+        "english": "Director of Campus Development",
+        "chinese": "校園發展總監",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of Campus Facilities and Sustainability": {
+        "english": "Director of Campus Facilities and Sustainability",
+        "chinese": "設施及可持續校園總監",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of Centralised Animal Facilities": {
+        "english": "Director of Centralised Animal Facilities",
+        "chinese": "動物資源中心主任",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of Chinese Language Centre": {
+        "english": "Director of Chinese Language Centre",
+        "chinese": "中國語文教學中心總監",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of Communications and Public Affairs": {
+        "english": "Director of Communications and Public Affairs",
+        "chinese": "傳訊及公共事務總監",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of Confucius Institute of Hong Kong": {
+        "english": "Director of Confucius Institute of Hong Kong",
+        "chinese": "香港孔子學院院長",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of Culture Promotion and Events": {
+        "english": "Director of Culture Promotion and Events",
+        "chinese": "文化及設施推廣總監",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of Educational Development": {
+        "english": "Director of Educational Development",
+        "chinese": "教學發展總監",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of Educational Research Centre": {
+        "english": "Director of Educational Research Centre",
+        "chinese": "教育研究中心總監",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of English Language Centre": {
+        "english": "Director of English Language Centre",
+        "chinese": "英語教學中心總監",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of Finance": {
+        "english": "Director of Finance",
+        "chinese": "財務總監",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of Global Engagement": {
+        "english": "Director of Global Engagement",
+        "chinese": "環球事務總監",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of Health and Safety": {
+        "english": "Director of Health and Safety",
+        "chinese": "健康及安全事務總監",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of Hong Kong Branch of National Engineering Research Center for Steel Construction": {
+        "english": "Director of Hong Kong Branch of National Engineering Research Center for Steel Construction",
+        "chinese": "國家鋼結構工程技術研究中心香港分中心主任",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of Hong Kong Branch of National Rail Transit Electrification and Automation Engineering Technology Research Center": {
+        "english": "Director of Hong Kong Branch of National Rail Transit Electrification and Automation Engineering Technology Research Center",
+        "chinese": "國家軌道交通電氣化與自動化工程技術研究中心香港分中心主任",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of Human Resources": {
+        "english": "Director of Human Resources",
+        "chinese": "人力資源總監",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of Information Technology": {
+        "english": "Director of Information Technology",
+        "chinese": "資訊科技總監",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of Industrial Centre": {
+        "english": "Director of Industrial Centre",
+        "chinese": "工業中心總監",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of Institute for Higher Education Research and Development": {
+        "english": "Director of Institute for Higher Education Research and Development",
+        "chinese": "高等教育研究及發展院院長",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of Institutional Advancement": {
+        "english": "Director of Institutional Advancement",
+        "chinese": "拓展事務總監",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of Institutional Planning and Analytics": {
+        "english": "Director of Institutional Planning and Analytics",
+        "chinese": "大學策劃總監",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of Internal Audit": {
+        "english": "Director of Internal Audit",
+        "chinese": "內部稽核總監",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of Jockey Club Design Institute for Social Innovation": {
+        "english": "Director of Jockey Club Design Institute for Social Innovation",
+        "chinese": "賽馬會社會創新設計院總監",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of Knowledge Transfer and Entrepreneurship": {
+        "english": "Director of Knowledge Transfer and Entrepreneurship",
+        "chinese": "知識轉移及創業總監",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of Language Education Institute": {
+        "english": "Director of Language Education Institute",
+        "chinese": "語言教學部院長",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of Mainland Development": {
+        "english": "Director of Mainland Development",
+        "chinese": "內地發展總監",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of Mental Health Research Centre": {
+        "english": "Director of Mental Health Research Centre",
+        "chinese": "精神健康研究中心主任",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of Otto Poon Charitable Foundation Research Institute for Smart Energy": {
+        "english": "Director of Otto Poon Charitable Foundation Research Institute for Smart Energy",
+        "chinese": "潘樂陶慈善基金智慧能源研究院院長",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of Otto Poon Charitable Foundation Smart Cities Research Institute": {
+        "english": "Director of Otto Poon Charitable Foundation Smart Cities Research Institute",
+        "chinese": "潘樂陶慈善基金智慧城市研究院院長",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of Photonics Research Institute": {
+        "english": "Director of Photonics Research Institute",
+        "chinese": "光子技術研究院院長",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of Policy Research Centre for Innovation and Technology / Co-Director of Policy Research Centre for Innovation and Technology": {
+        "english": "Director of Policy Research Centre for Innovation and Technology / Co-Director of Policy Research Centre for Innovation and Technology",
+        "chinese": "科技及創新政策研究中心主任 / 科技及創新政策研究中心聯席主任",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of PolyU Academy for Artificial Intelligence": {
+        "english": "Director of PolyU Academy for Artificial Intelligence",
+        "chinese": "香港理工大學人工智能高等研究院院長",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of PolyU Academy for Interdisciplinary Research": {
+        "english": "Director of PolyU Academy for Interdisciplinary Research",
+        "chinese": "香港理工大學高等研究院院長",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of PolyU Aerospace Research Academy": {
+        "english": "Director of PolyU Aerospace Research Academy",
+        "chinese": "香港理工大學航空航天高等研究院院長",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of Research Centre for Chinese Medicine Innovation": {
+        "english": "Director of Research Centre for Chinese Medicine Innovation",
+        "chinese": "中醫藥創新研究中心主任",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of Research Centre for Deep Space Explorations": {
+        "english": "Director of Research Centre for Deep Space Explorations",
+        "chinese": "深空探測研究中心主任",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of Research Centre for Digital Transformation of Tourism / Co-Director of Research Centre for Digital Transformation of Tourism": {
+        "english": "Director of Research Centre for Digital Transformation of Tourism / Co-Director of Research Centre for Digital Transformation of Tourism",
+        "chinese": "旅遊業數字化轉型研究中心主任 / 旅遊業數字化轉型研究中心聯合主任",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of Research Centre for Environmental, Social, and Governance Advancement / Co-Director of Research Centre for Environmental, Social, and Governance Advancement": {
+        "english": "Director of Research Centre for Environmental, Social, and Governance Advancement / Co-Director of Research Centre for Environmental, Social, and Governance Advancement",
+        "chinese": "環境，社會，和治理促進研究中心主任 /  環境，社會，和治理促進研究中心聯席主任",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of Research Centre for Resources Engineering towards Carbon Neutrality": {
+        "english": "Director of Research Centre for Resources Engineering towards Carbon Neutrality",
+        "chinese": "碳中和資源工程研究中心主任",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of Research Centre for SHARP Vision": {
+        "english": "Director of Research Centre for SHARP Vision",
+        "chinese": "視覺科學研究中心主任",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of Research Centre of Textiles for Future Fashion": {
+        "english": "Director of Research Centre of Textiles for Future Fashion",
+        "chinese": "未來服裝紡織科技研究中心主任",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of Research and Innovation": {
+        "english": "Director of Research and Innovation",
+        "chinese": "研究及創新事務總監",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of Research Institute for Advanced Manufacturing": {
+        "english": "Director of Research Institute for Advanced Manufacturing",
+        "chinese": "先進製造研究院院長",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of Research Institute for Artificial Intelligence of Things": {
+        "english": "Director of Research Institute for Artificial Intelligence of Things",
+        "chinese": "人工智能物聯網研究院院長",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of Research Institute for Future Food": {
+        "english": "Director of Research Institute for Future Food",
+        "chinese": "未來食品研究院院長",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of Research Institute for Intelligent Wearable Systems": {
+        "english": "Director of Research Institute for Intelligent Wearable Systems",
+        "chinese": "智能可穿戴系統研究院院長",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of Research Institute for Land and Space": {
+        "english": "Director of Research Institute for Land and Space",
+        "chinese": "土地及空間研究院院長",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of Research Institute for Quantum Technology": {
+        "english": "Director of Research Institute for Quantum Technology",
+        "chinese": "量子技術研究院院長",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of Research Institute for Smart Ageing": {
+        "english": "Director of Research Institute for Smart Ageing",
+        "chinese": "智齡研究院院長",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of Research Institute for Sports Science and Technology": {
+        "english": "Director of Research Institute for Sports Science and Technology",
+        "chinese": "體育科技研究院院長",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of Research Institute for Sustainable Urban Development": {
+        "english": "Director of Research Institute for Sustainable Urban Development",
+        "chinese": "可持續城市發展研究院院長",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of State Key Laboratory of Climate Resilience for Coastal Cities": {
+        "english": "Director of State Key Laboratory of Climate Resilience for Coastal Cities",
+        "chinese": "沿海城市氣候韌性全國重點實驗室主任",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of State Key Laboratory of Ultra-precision Machining Technology": {
+        "english": "Director of State Key Laboratory of Ultra-precision Machining Technology",
+        "chinese": "超精密加工技術全國重點實驗室主任",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of University Health Service": {
+        "english": "Director of University Health Service",
+        "chinese": "大學醫療保健總監",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of University Research Facility in 3D Printing": {
+        "english": "Director of University Research Facility in 3D Printing",
+        "chinese": "三維打印技術中心實驗室主任",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of University Research Facility in Behavioral and Systems Neuroscience": {
+        "english": "Director of University Research Facility in Behavioral and Systems Neuroscience",
+        "chinese": "神經科學中心實驗室主任",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of University Centre for AI Computing": {
+        "english": "Director of University Centre for AI Computing",
+        "chinese": "人工智能計算中心主任",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of University Research Facility in Life Sciences": {
+        "english": "Director of University Research Facility in Life Sciences",
+        "chinese": "生命科學中心實驗室主任",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of University Research Facility in Chemical and Environmental Analysis": {
+        "english": "Director of University Research Facility in Chemical and Environmental Analysis",
+        "chinese": "化學和環境分析中心實驗室主任",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of University Research Facility in Materials Characterization and Device Fabrication": {
+        "english": "Director of University Research Facility in Materials Characterization and Device Fabrication",
+        "chinese": "材料與器件中心實驗室主任",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director of the PolyU Press": {
+        "english": "Director of the PolyU Press",
+        "chinese": "香港理工大學出版社社長",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director, Hong Kong Community College": {
+        "english": "Director, Hong Kong Community College",
+        "chinese": "香港專上學院院長",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Director, School of Professional Education & Executive Development": {
+        "english": "Director, School of Professional Education & Executive Development",
+        "chinese": "專業進修學院院長",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Executive Director of Aviation Services Research Centre": {
+        "english": "Executive Director of Aviation Services Research Centre",
+        "chinese": "航空服務研究中心執行院長",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Executive Director of PolyU Academy for Artificial Intelligence": {
+        "english": "Executive Director of PolyU Academy for Artificial Intelligence",
+        "chinese": "香港理工大學人工智能高等研究院執行院長",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Executive Director of PolyU Aerospace Research Academy": {
+        "english": "Executive Director of PolyU Aerospace Research Academy",
+        "chinese": "香港理工大學航空航天高等研究院執行院長",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Head of College of Undergraduate Researchers and Innovators": {
+        "english": "Head of College of Undergraduate Researchers and Innovators",
+        "chinese": "本科生科創學院院長",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Head of Preparatory Office": {
+        "english": "Head of Preparatory Office",
+        "chinese": "私立大學籌備處處長",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Head, Service-Learning and Leadership Office": {
+        "english": "Head, Service-Learning and Leadership Office",
+        "chinese": "服務學習及領導才能發展處處長",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "University Librarian": {
+        "english": "University Librarian",
+        "chinese": "圖書館館長",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "R": {
+        "english": "Registrar",
+        "chinese": "教務長",
+        "abbreviation": "R",
+        "category": "Post titles"
+    },
+    "Assistant Professor": {
+        "english": "Assistant Professor",
+        "chinese": "助理教授",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Assistant Professor of Practice": {
+        "english": "Assistant Professor of Practice",
+        "chinese": "實務助理教授",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Associate Professor": {
+        "english": "Associate Professor",
+        "chinese": "副教授",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Associate Professor of Practice": {
+        "english": "Associate Professor of Practice",
+        "chinese": "實務副教授",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Chair Professor": {
+        "english": "Chair Professor",
+        "chinese": "講座教授",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Clinical Associate": {
+        "english": "Clinical Associate",
+        "chinese": "臨床導師",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Clinical Instructor": {
+        "english": "Clinical Instructor",
+        "chinese": "導師",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Distinguished Chair Professor": {
+        "english": "Distinguished Chair Professor",
+        "chinese": "傑出講座教授",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Distinguished Research Professor": {
+        "english": "Distinguished Research Professor",
+        "chinese": "傑出研究教授",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Emeritus Professor": {
+        "english": "Emeritus Professor",
+        "chinese": "榮休教授",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Instructor": {
+        "english": "Instructor",
+        "chinese": "導師",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Language Instructor": {
+        "english": "Language Instructor",
+        "chinese": "語文導師",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Lecturer": {
+        "english": "Lecturer",
+        "chinese": "講師",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Principal Clinical Associate": {
+        "english": "Principal Clinical Associate",
+        "chinese": "首席臨床導師",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Principal Lecturer": {
+        "english": "Principal Lecturer",
+        "chinese": "首席講師",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Principal Teaching Fellow": {
+        "english": "Principal Teaching Fellow",
+        "chinese": "首席專任導師",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Professor": {
+        "english": "Professor",
+        "chinese": "教授",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Professor of Practice": {
+        "english": "Professor of Practice",
+        "chinese": "實務教授",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Research Assistant Professor": {
+        "english": "Research Assistant Professor",
+        "chinese": "助理教授（研究）",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Research Associate Professor": {
+        "english": "Research Associate Professor",
+        "chinese": "副教授（研究）",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Research Professor": {
+        "english": "Research Professor",
+        "chinese": "研究教授",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Senior Clinical Associate": {
+        "english": "Senior Clinical Associate",
+        "chinese": "高級臨床導師",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Senior Instructor": {
+        "english": "Senior Instructor",
+        "chinese": "高級導師",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Senior Lecturer": {
+        "english": "Senior Lecturer",
+        "chinese": "高級講師",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Senior Teaching Fellow": {
+        "english": "Senior Teaching Fellow",
+        "chinese": "高級專任導師",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Teaching Assistant": {
+        "english": "Teaching Assistant",
+        "chinese": "教學助理",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Teaching Fellow": {
+        "english": "Teaching Fellow",
+        "chinese": "專任導師",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Tutor": {
+        "english": "Tutor",
+        "chinese": "助教",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Postdoctoral Fellow": {
+        "english": "Postdoctoral Fellow",
+        "chinese": "博士後研究員",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Principal Research/Project Fellow": {
+        "english": "Principal Research/Project Fellow",
+        "chinese": "首席研究/項目員",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Professorial Research/Project Fellow": {
+        "english": "Professorial Research/Project Fellow",
+        "chinese": "資深研究/項目員",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Research/Project Administrative Assistant": {
+        "english": "Research/Project Administrative Assistant",
+        "chinese": "研究/項目行政助理",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Research/Project Assistant": {
+        "english": "Research/Project Assistant",
+        "chinese": "研究/項目助理",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Research/Project Associate": {
+        "english": "Research/Project Associate",
+        "chinese": "副研究/項目員",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Research/Project Fellow": {
+        "english": "Research/Project Fellow",
+        "chinese": "研究/項目員",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Research/Project Technical Assistant": {
+        "english": "Research/Project Technical Assistant",
+        "chinese": "研究/項目技術助理",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Senior Research/Project Fellow": {
+        "english": "Senior Research/Project Fellow",
+        "chinese": "高級研究/項目員",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Adjunct Assistant Professor": {
+        "english": "Adjunct Assistant Professor",
+        "chinese": "客座助理教授",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Adjunct Associate Professor": {
+        "english": "Adjunct Associate Professor",
+        "chinese": "客座副教授",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Adjunct Clinical Associate": {
+        "english": "Adjunct Clinical Associate",
+        "chinese": "客座臨床導師",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Adjunct Professor": {
+        "english": "Adjunct Professor",
+        "chinese": "客座教授",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Distinguished Honorary Professor": {
+        "english": "Distinguished Honorary Professor",
+        "chinese": "傑出名譽教授",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Distinguished Visiting Chair Professor": {
+        "english": "Distinguished Visiting Chair Professor",
+        "chinese": "傑出訪問講座教授",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Honorary Clinical Associate": {
+        "english": "Honorary Clinical Associate",
+        "chinese": "名譽臨床導師",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Honorary Fellow": {
+        "english": "Honorary Fellow",
+        "chinese": "名譽學人",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Honorary Lecturer": {
+        "english": "Honorary Lecturer",
+        "chinese": "名譽講師",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Honorary Professor": {
+        "english": "Honorary Professor",
+        "chinese": "名譽教授",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Visiting Assistant Professor": {
+        "english": "Visiting Assistant Professor",
+        "chinese": "訪問助理教授",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Visiting Associate Professor": {
+        "english": "Visiting Associate Professor",
+        "chinese": "訪問副教授",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Visiting Chair Professor": {
+        "english": "Visiting Chair Professor",
+        "chinese": "訪問講座教授",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Visiting Clinical Associate": {
+        "english": "Visiting Clinical Associate",
+        "chinese": "訪問臨床導師",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Visiting Fellow": {
+        "english": "Visiting Fellow",
+        "chinese": "訪問學人",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Visiting Lecturer": {
+        "english": "Visiting Lecturer",
+        "chinese": "訪問講師",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Visiting Lecturer (Part-time)": {
+        "english": "Visiting Lecturer (Part-time)",
+        "chinese": "兼職講師",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "Visiting Professor": {
+        "english": "Visiting Professor",
+        "chinese": "訪問教授",
+        "abbreviation": "",
+        "category": "Post titles"
+    },
+    "WIE": {
+        "english": "Work-Integrated Education",
+        "chinese": "校企協作教育/實習",
+        "abbreviation": "WIE",
+        "category": "Student Affairs"
+    },
+    "GUR": {
+        "english": "General University Requirements",
+        "chinese": "學院通識要求",
+        "abbreviation": "GUR",
+        "category": "Academic Rules"
+    },
+    "EEM": {
+        "english": "BSc (Hons) in Enterprise Engineering with Management",
+        "chinese": "企業工程兼管理(榮譽)理學士",
+        "abbreviation": "EEM",
+        "programme_code": "45499-EEM / Senior Year: 45499-SYE",
+        "jupas_code": "JS3571",
+        "category": "Undergraduate Degree Programme"
+    },
+    "LEM": {
+        "english": "BSc (Hons) in Logistics Engineering with Management",
+        "chinese": "物流工程兼管理(榮譽)理學士",
+        "abbreviation": "LEM",
+        "programme_code": "45499-LEM / Senior Year: 45499-SYL",
+        "jupas_code": "JS3571",
+        "category": "Undergraduate Degree Programme"
+    },
+    "PIE": {
+        "english": "BEng (Hons) Scheme in Product and Industrial Engineering / Product Innovation and Smart Manufacturing (PISM)",
+        "chinese": "產品及工業工程(榮譽)工學士組合課程 / 產品創新及智能製造組合課程",
+        "abbreviation": "PIE",
+        "programme_code": "45498",
+        "jupas_code": "JS3236",
+        "category": "Undergraduate Degree Scheme"
+    },
+    "AOS": {
+        "english": "BSc (Hons) in Aviation Operations and Systems",
+        "chinese": "航空營運及系統(榮譽)理學士",
+        "abbreviation": "AOS",
+        "category": "Undergraduate Degree Programme"
+    },
+    "PEM": {
+        "english": "BEng (Hons) in Product Engineering with Marketing",
+        "chinese": "產品工程兼市場學(榮譽)工學士",
+        "abbreviation": "PEM",
+        "category": "Undergraduate Degree Programme"
+    },
+    "KTM": {
+        "english": "MSc in Knowledge and Technology Management",
+        "chinese": "知識及科技管理理學碩士",
+        "abbreviation": "KTM",
+        "category": "Taught Postgraduate Programme"
+    },
+    "ILS": {
+        "english": "MSc in Industrial Logistics Systems",
+        "chinese": "工業物流系統理學碩士",
+        "abbreviation": "ILS",
+        "category": "Taught Postgraduate Programme"
+    },
+    "SM": {
+        "english": "MSc in Smart Manufacturing",
+        "chinese": "智能製造理學碩士",
+        "abbreviation": "SM",
+        "category": "Taught Postgraduate Programme"
+    },
+    "IS_XIAN": {
+        "english": "MSc in Information Systems in Xi'an",
+        "chinese": "資訊系統理學碩士 (西安)",
+        "abbreviation": "MSc IS (Xi'an)",
+        "category": "Taught Postgraduate Programme"
+    },
+    "IGDS": {
+        "english": "Integrated Graduate Development Scheme (MSc in Engineering Business Management & MSc in Supply Chain and Logistics Management)",
+        "chinese": "綜合企業發展計劃 (工程商業管理理學碩士及供應鏈及物流管理理學碩士)",
+        "abbreviation": "IGDS (EBM / SCLM)",
+        "category": "Taught Postgraduate Programme"
+    },
+    "EngD": {
+        "english": "Engineering Doctorate",
+        "chinese": "工程學博士",
+        "abbreviation": "EngD",
+        "category": "Doctoral Programme"
+    },
+    "RPg": {
+        "english": "Research Postgraduate Programme (MPhil / PhD)",
+        "chinese": "哲學碩士 / 哲學博士研究學位課程",
+        "abbreviation": "MPhil / PhD",
+        "category": "Research Postgraduate Programme"
+    },
+    "General Subject Registration - General rules & Procedures (Schedule/ Guides)": {
+        "english": "General rules & Procedures (Schedule/ Guides)",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "General Subject Registration",
+        "link": "https://www.polyu.edu.hk/ar/students-in-taught-programmes/registration-information/subject-registration/",
+        "file_type": "Website"
+    },
+    "General Subject Registration - Steps for Subject Registration": {
+        "english": "Steps for Subject Registration",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "General Subject Registration",
+        "link": "https://www.polyu.edu.hk/ar/students-in-taught-programmes/registration-information/subject-registration/guides-for-subject-registration/",
+        "file_type": "Website"
+    },
+    "General Subject Registration - FAQs": {
+        "english": "FAQs",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "General Subject Registration",
+        "link": "https://support.ar.polyu.edu.hk/portal/en/kb/subregistration",
+        "file_type": "Website"
+    },
+    "General Subject Registration - Student Handbook (latest 26/27)": {
+        "english": "Student Handbook (latest 26/27)",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "General Subject Registration",
+        "link": "https://www.polyu.edu.hk/ar/docdrive/polyu-students/student-handbook/Student_Handbook_2026-27_English.pdf",
+        "file_type": "PDF"
+    },
+    "ISE Programme & PRDs (Undergraduates) - PIE": {
+        "english": "PIE",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "ISE Programme & PRDs (Undergraduates)",
+        "link": "https://www.polyu.edu.hk/ise/study/undergraduate-programmes/beng-hons-scheme-in-product-and-industrial-engineering/",
+        "file_type": "Website"
+    },
+    "ISE Programme & PRDs (Undergraduates) - PIE PRD": {
+        "english": "PIE PRD",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "ISE Programme & PRDs (Undergraduates)",
+        "link": "https://www.polyu.edu.hk/ise/-/media/department/ise/content/study/current-student/programme-related-info/programme-document/45498-prd-2025.pdf?rev=7d3bd613667a4e97a0f47c8327e608be&hash=FF5A3EDCBBED06C64D6D7B9C38981720",
+        "file_type": "PDF"
+    },
+    "ISE Programme & PRDs (Undergraduates) - ISE (4year)": {
+        "english": "ISE (4year)",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "ISE Programme & PRDs (Undergraduates)",
+        "link": "(The 4year curriculum has to refer to PRD)",
+        "file_type": "Website"
+    },
+    "ISE Programme & PRDs (Undergraduates) - ISE (2year)": {
+        "english": "ISE (2year)",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "ISE Programme & PRDs (Undergraduates)",
+        "link": "https://www.polyu.edu.hk/ise/study/undergraduate-programmes/beng-hons-scheme-in-product-and-industrial-engineering/bachelor-of-engineering-honours-in-industrial-and-systems-engineering/",
+        "file_type": "Website"
+    },
+    "ISE Programme & PRDs (Undergraduates) - PEM (4year)": {
+        "english": "PEM (4year)",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "ISE Programme & PRDs (Undergraduates)",
+        "link": "(The 4year curriculum has to refer to PRD)",
+        "file_type": "Website"
+    },
+    "ISE Programme & PRDs (Undergraduates) - PEM (2year)": {
+        "english": "PEM (2year)",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "ISE Programme & PRDs (Undergraduates)",
+        "link": "https://www.polyu.edu.hk/ise/study/undergraduate-programmes/beng-hons-scheme-in-product-and-industrial-engineering/bachelor-of-engineering-honours-in-product-engineering-with-marketing/",
+        "file_type": "Website"
+    },
+    "ISE Programme & PRDs (Undergraduates) - LEE (4year)": {
+        "english": "LEE (4year)",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "ISE Programme & PRDs (Undergraduates)",
+        "link": "https://www.polyu.edu.hk/ise/study/undergraduate-programmes/bsc-hons-scheme-in-logistics-and-enterprise-engineering/",
+        "file_type": "Website"
+    },
+    "ISE Programme & PRDs (Undergraduates) - LEE PRD": {
+        "english": "LEE PRD",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "ISE Programme & PRDs (Undergraduates)",
+        "link": "https://www.polyu.edu.hk/ise/-/media/department/ise/content/study/current-student/programme-related-info/programme-document/45499-prd-2025.pdf?rev=76b5ad26172b45ff9d65bd64eff14b31&hash=2DA28C9FBCF8C90AEAF2ECF9C1301021",
+        "file_type": "PDF"
+    },
+    "ISE Programme & PRDs (Undergraduates) - LEM (4year)": {
+        "english": "LEM (4year)",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "ISE Programme & PRDs (Undergraduates)",
+        "link": "(The 4year curriculum has to refer to PRD)",
+        "file_type": "Website"
+    },
+    "ISE Programme & PRDs (Undergraduates) - LEM (2year)": {
+        "english": "LEM (2year)",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "ISE Programme & PRDs (Undergraduates)",
+        "link": "https://www.polyu.edu.hk/ise/study/undergraduate-programmes/bsc-hons-scheme-in-logistics-and-enterprise-engineering/bachelor-of-science-honours-in-logistics-engineering-with-management/",
+        "file_type": "Website"
+    },
+    "ISE Programme & PRDs (Undergraduates) - EEM (4year)": {
+        "english": "EEM (4year)",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "ISE Programme & PRDs (Undergraduates)",
+        "link": "(The 4year curriculum has to refer to PRD)",
+        "file_type": "Website"
+    },
+    "ISE Programme & PRDs (Undergraduates) - EEM(2year)": {
+        "english": "EEM(2year)",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "ISE Programme & PRDs (Undergraduates)",
+        "link": "https://www.polyu.edu.hk/ise/study/undergraduate-programmes/bsc-hons-scheme-in-logistics-and-enterprise-engineering/bachelor-of-science-honours-in-enterprise-engineering-with-management/",
+        "file_type": "Website"
+    },
+    "ISE Programme & PRDs (Undergraduates) - PISM": {
+        "english": "PISM",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "ISE Programme & PRDs (Undergraduates)",
+        "link": "https://www.polyu.edu.hk/ise/study/undergraduate-programmes/beng-hons-scheme-in-product-innovation-and-smart-manufacturing/",
+        "file_type": "Website"
+    },
+    "ISE Programme & PRDs (Undergraduates) - PISM PRD": {
+        "english": "PISM PRD",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "ISE Programme & PRDs (Undergraduates)",
+        "link": "https://www.polyu.edu.hk/ise/-/media/department/ise/content/study/current-student/programme-related-info/programme-document/45401-prd-2025.pdf?rev=546f74ac783d4208ab74c0b14957b016&hash=B92176D97B5FA62F472F9702E6429B18",
+        "file_type": "PDF"
+    },
+    "ISE Programme & PRDs (Undergraduates) - SM (4year)": {
+        "english": "SM (4year)",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "ISE Programme & PRDs (Undergraduates)",
+        "link": "https://www.polyu.edu.hk/ise/study/undergraduate-programmes/beng-hons-scheme-in-product-innovation-and-smart-manufacturing/bachelor-of-engineering-honours-in-smart-manufacturing/",
+        "file_type": "Website"
+    },
+    "ISE Programme & PRDs (Undergraduates) - PIM (4year)": {
+        "english": "PIM (4year)",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "ISE Programme & PRDs (Undergraduates)",
+        "link": "https://www.polyu.edu.hk/ise/study/undergraduate-programmes/beng-hons-scheme-in-product-innovation-and-smart-manufacturing/bachelor-of-engineering-honours-in-product-innovation-with-marketing/",
+        "file_type": "Website"
+    },
+    "ISE Programme & PRDs (Undergraduates) - ISCEM": {
+        "english": "ISCEM",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "ISE Programme & PRDs (Undergraduates)",
+        "link": "https://www.polyu.edu.hk/ise/study/undergraduate-programmes/bsc-hons-scheme-in-intelligent-supply-chain-and-engineering-management/",
+        "file_type": "Website"
+    },
+    "ISE Programme & PRDs (Undergraduates) - PRD (ISC & EMDA)": {
+        "english": "PRD (ISC & EMDA)",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "ISE Programme & PRDs (Undergraduates)",
+        "link": "https://www.polyu.edu.hk/ise/-/media/department/ise/content/study/current-student/programme-related-info/programme-document/45402-prd-2025.pdf?rev=3ab4ef408a054c0eab7c3b883ff6dd0b&hash=E40EBEE3EF048DA2B3E1B5722A885BCB",
+        "file_type": "PDF"
+    },
+    "ISE Programme & PRDs (Undergraduates) - PRD (AOS)": {
+        "english": "PRD (AOS)",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "ISE Programme & PRDs (Undergraduates)",
+        "link": "https://www.polyu.edu.hk/ise/-/media/department/ise/content/study/current-student/programme-related-info/programme-document/45497-prd-2025.pdf?rev=a19e78509021430c83d55b81dfab6164&hash=20453C5422497D8788F0C767A731012B",
+        "file_type": "PDF"
+    },
+    "ISE Programme & PRDs (Undergraduates) - ISC (4year)": {
+        "english": "ISC (4year)",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "ISE Programme & PRDs (Undergraduates)",
+        "link": "https://www.polyu.edu.hk/ise/study/undergraduate-programmes/bsc-hons-scheme-in-intelligent-supply-chain-and-engineering-management/bachelor-of-science-honours-in-intelligent-supply-chain/",
+        "file_type": "Website"
+    },
+    "ISE Programme & PRDs (Undergraduates) - EMDA (4year)": {
+        "english": "EMDA (4year)",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "ISE Programme & PRDs (Undergraduates)",
+        "link": "https://www.polyu.edu.hk/ise/study/undergraduate-programmes/bsc-hons-scheme-in-intelligent-supply-chain-and-engineering-management/bachelor-of-science-honours-in-engineering-management-with-data-analytics/",
+        "file_type": "Website"
+    },
+    "ISE Programme & PRDs (Undergraduates) - AOS (4year)": {
+        "english": "AOS (4year)",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "ISE Programme & PRDs (Undergraduates)",
+        "link": "https://www.polyu.edu.hk/ise/study/undergraduate-programmes/bsc-hons-scheme-in-intelligent-supply-chain-and-engineering-management/bachelor-of-science-honours-in-aviation-operations-and-systems/",
+        "file_type": "Website"
+    },
+    "ISE Programme & PRDs (Undergraduates) - AOS (2year)": {
+        "english": "AOS (2year)",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "ISE Programme & PRDs (Undergraduates)",
+        "link": "https://www.polyu.edu.hk/ise/study/undergraduate-programmes/bachelor-of-science-honours-in-aviation-operations-and-systems/",
+        "file_type": "Website"
+    },
+    "ISE Programme & PRDs & Dissertation (Postgraduates) - MSc in Knowledge and Technology Management": {
+        "english": "MSc in Knowledge and Technology Management",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "ISE Programme & PRDs & Dissertation (Postgraduates)",
+        "link": "https://www.polyu.edu.hk/ise/study/taught-postgraduate-programmes/master-of-science-in-knowledge-and-technology-management/",
+        "file_type": "Website"
+    },
+    "ISE Programme & PRDs & Dissertation (Postgraduates) - MSc in Industrial and Logistics Systems": {
+        "english": "MSc in Industrial and Logistics Systems",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "ISE Programme & PRDs & Dissertation (Postgraduates)",
+        "link": "https://www.polyu.edu.hk/ise/study/taught-postgraduate-programmes/master-of-science-in-industrial-logistics-systems/",
+        "file_type": "Website"
+    },
+    "ISE Programme & PRDs & Dissertation (Postgraduates) - MSc in Smart Manufacturing": {
+        "english": "MSc in Smart Manufacturing",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "ISE Programme & PRDs & Dissertation (Postgraduates)",
+        "link": "https://www.polyu.edu.hk/ise/study/taught-postgraduate-programmes/master-of-science-in-smart-manufacturing/",
+        "file_type": "Website"
+    },
+    "ISE Programme & PRDs & Dissertation (Postgraduates) - PRD for the above Master": {
+        "english": "PRD for the above Master",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "ISE Programme & PRDs & Dissertation (Postgraduates)",
+        "link": "https://www.polyu.edu.hk/ise/-/media/department/ise/content/study/current-student/programme-related-info/programme-document/45100-pgs-handbook-251.pdf?rev=acf8b0cbefe0473eae2810ccfc526ba1&hash=AAFCF0BEEE8F6881509D4F77F18732D7",
+        "file_type": "PDF"
+    },
+    "ISE Programme & PRDs & Dissertation (Postgraduates) - MSc in Information System in Xi’an": {
+        "english": "MSc in Information System in Xi’an",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "ISE Programme & PRDs & Dissertation (Postgraduates)",
+        "link": "https://www.polyu.edu.hk/ise/study/taught-postgraduate-programmes/master-of-science-in-information-systems-in-xian/",
+        "file_type": "Website"
+    },
+    "ISE Programme & PRDs & Dissertation (Postgraduates) - PRD (MSc in Information System in Xi’an)": {
+        "english": "PRD (MSc in Information System in Xi’an)",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "ISE Programme & PRDs & Dissertation (Postgraduates)",
+        "link": "https://www.polyu.edu.hk/ise/-/media/department/ise/content/study/current-student/programme-related-info/programme-document/prd_45103-outpost_2025-26.pdf?rev=f66764523e0448499b74aa7de4349ad2&hash=6D5E9182576DA0B9470C2C63C9FB2B69",
+        "file_type": "Website"
+    },
+    "ISE Programme & PRDs & Dissertation (Postgraduates) - Postgraduate Dissertation": {
+        "english": "Postgraduate Dissertation",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "ISE Programme & PRDs & Dissertation (Postgraduates)",
+        "link": "https://www.polyu.edu.hk/ise/study/information-for-current-students/programme-related-info/postgraduate-dissertation/",
+        "file_type": "Website"
+    },
+    "ISE Programme & PRDs & Dissertation (Postgraduates) - Dissertation Guidelines": {
+        "english": "Dissertation Guidelines",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "ISE Programme & PRDs & Dissertation (Postgraduates)",
+        "link": "https://www.polyu.edu.hk/ise/-/media/department/ise/content/study/current-student/programme-related-info/tpgdissertation/dissertation-guideline.pdf?rev=42c3e83620fc4ea0ba4dab88d61c1f98&hash=A1991E786F76EE52110C71F0034BA06B",
+        "file_type": "PDF"
+    },
+    "ISE Programme & PRDs & Dissertation (Postgraduates) - Dissertation Format": {
+        "english": "Dissertation Format",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "ISE Programme & PRDs & Dissertation (Postgraduates)",
+        "link": "https://www.polyu.edu.hk/ise/-/media/department/ise/content/study/current-student/programme-related-info/tpgdissertation/dissertation-format.pdf?rev=8a791036c2834bd6a356caec80242535&hash=E71A14BF77F77E37962784635AE9C3B2",
+        "file_type": "PDF"
+    },
+    "ISE Research - ISE Research Overview": {
+        "english": "ISE Research Overview",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "ISE Research",
+        "link": "https://www.polyu.edu.hk/ise/research/research-overview/",
+        "file_type": "Website"
+    },
+    "ISE Research - ISE Major Research Area": {
+        "english": "ISE Major Research Area",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "ISE Research",
+        "link": "https://www.polyu.edu.hk/ise/study/research-postgraduate-programme-mphil-phd/major-research-areas/",
+        "file_type": "Website"
+    },
+    "ISE Research - ISE PhD & Mphil": {
+        "english": "ISE PhD & Mphil",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "ISE Research",
+        "link": "https://www.polyu.edu.hk/study/pg/rpg/20263/ise",
+        "file_type": "Website"
+    },
+    "ISE Research - PRD for research degrees": {
+        "english": "PRD for research degrees",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "ISE Research",
+        "link": "https://www.polyu.edu.hk/ise/-/media/department/ise/content/study/current-student/programme-related-info/programme-document/ise-rpg-programme-doc-outlinefor-rpg-students-admitted-from-the-202526-cohort-onwards.pdf?rev=72f5e708d3e940ebad49c048f66cb5e6&hash=E4C5DE06498D02505900EBEAAF387E93",
+        "file_type": "PDF"
+    },
+    "General GPA & Integrity - Explanation on Assessment Results": {
+        "english": "Explanation on Assessment Results",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "General GPA & Integrity",
+        "link": "https://www.polyu.edu.hk/ar/docdrive/polyu-students/explanation-on-assessment-results.pdf",
+        "file_type": "PDF"
+    },
+    "General GPA & Integrity - FAQs on Assessment": {
+        "english": "FAQs on Assessment",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "General GPA & Integrity",
+        "link": "https://support.ar.polyu.edu.hk/portal/en/kb/uat-ar-assessment",
+        "file_type": "Website"
+    },
+    "General GPA & Integrity - Academic Integrity": {
+        "english": "Academic Integrity",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "General GPA & Integrity",
+        "link": "https://www.polyu.edu.hk/cus/staff/academic-integrity/",
+        "file_type": "Website"
+    },
+    "General Graduation Procedures - FAQs related to Graduation": {
+        "english": "FAQs related to Graduation",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "General Graduation Procedures",
+        "link": "https://support.ar.polyu.edu.hk/portal/en/kb/articles/q2-do-i-need-to-apply-for-graduation-if-so-what-should-i-do-and-what-should-i-pay-attention-to",
+        "file_type": "Website"
+    },
+    "General Graduation Procedures - Application for Graduation Notices": {
+        "english": "Application for Graduation Notices",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "General Graduation Procedures",
+        "link": "https://www.polyu.edu.hk/ar/students-in-taught-programmes/notices-to-students/",
+        "file_type": "Website"
+    },
+    "General Graduation Procedures - Award Parchment": {
+        "english": "Award Parchment",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "General Graduation Procedures",
+        "link": "https://www.polyu.edu.hk/ar/graduates/award-parchment/",
+        "file_type": "Website"
+    },
+    "General Graduation Procedures - Congregation/ Alumni": {
+        "english": "Congregation/ Alumni",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "General Graduation Procedures",
+        "link": "https://www.polyu.edu.hk/ar/graduates/congregation-arrangements/may-session/",
+        "file_type": "Website"
+    },
+    "ISE WIE - ISE WIE Guidelines": {
+        "english": "ISE WIE Guidelines",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "ISE WIE",
+        "link": "https://www.polyu.edu.hk/ise/-/media/department/ise/content/study/current-student/programme-related-info/wie/guidelines_for_wie.pdf?rev=811e3672c58d40c6b39b70b6d5371eb0&hash=BC86CE309D8757176F371C80814DAEF6",
+        "file_type": "PDF"
+    },
+    "ISE WIE - ISE WIE Management System User Guide": {
+        "english": "ISE WIE Management System User Guide",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "ISE WIE",
+        "link": "https://www.polyu.edu.hk/ise/-/media/department/ise/content/study/current-student/programme-related-info/wie/wie-management-system-user-guide.pdf?rev=e4c23b3b036f4032bf2fddf3a0b5e9ba&hash=30968F24813F56BD7E35C21096332892",
+        "file_type": "PDF"
+    },
+    "ISE WIE - Appendix C": {
+        "english": "Appendix C",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "ISE WIE",
+        "link": "https://www.polyu.edu.hk/ise/-/media/department/ise/content/study/current-student/programme-related-info/wie/wie_appx_c_student_intern_form.pdf?rev=23ee2cbed5ec4ab08b69b184741ca003&hash=B7787AC00C02946BBB86CEA9B6226D7D",
+        "file_type": "PDF"
+    },
+    "ISE WIE - Appendix D": {
+        "english": "Appendix D",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "ISE WIE",
+        "link": "https://www.polyu.edu.hk/ise/-/media/department/ise/content/study/current-student/programme-related-info/wie/wie_appx_d_work_experience_student_form.pdf?rev=7c2459e3a08942e5a919c7892c743b09&hash=E277C9CA3AFC7F9FD5A27192EC7DD090",
+        "file_type": "PDF"
+    },
+    "ISE WIE - FAQs": {
+        "english": "FAQs",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "ISE WIE",
+        "link": "https://www.polyu.edu.hk/sao/internal/careers-and-placement-section/faqs/",
+        "file_type": "Website"
+    },
+    "General Exchange & Study Abroad - Semester exchange": {
+        "english": "Semester exchange",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "General Exchange & Study Abroad",
+        "link": "https://www.polyu.edu.hk/geo/exchange-and-study-abroad/outgoing-students/semester-exchange/",
+        "file_type": "Website"
+    },
+    "General Exchange & Study Abroad - Summer exchange": {
+        "english": "Summer exchange",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "General Exchange & Study Abroad",
+        "link": "https://www.polyu.edu.hk/geo/exchange-and-study-abroad/outgoing-students/summer-exchange/",
+        "file_type": "Website"
+    },
+    "General Exchange & Study Abroad - Other Opportunities and HKSAR Subsidies": {
+        "english": "Other Opportunities and HKSAR Subsidies",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "General Exchange & Study Abroad",
+        "link": "https://www.polyu.edu.hk/geo/exchange-and-study-abroad/outgoing-students/other-opportunities/",
+        "file_type": "Website"
+    },
+    "Minor / ISE Secondary Major - ISC with AIDA": {
+        "english": "ISC with AIDA",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "Minor / ISE Secondary Major",
+        "link": "https://www.polyu.edu.hk/ise/study/undergraduate-programmes/bsc-hons-scheme-in-intelligent-supply-chain-and-engineering-management/bachelor-of-science-honours-in-intelligent-supply-chain/secondary-major/",
+        "file_type": "Website"
+    },
+    "Minor / ISE Secondary Major - PIM with IE": {
+        "english": "PIM with IE",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "Minor / ISE Secondary Major",
+        "link": "https://www.polyu.edu.hk/ise/study/undergraduate-programmes/beng-hons-scheme-in-product-innovation-and-smart-manufacturing/bachelor-of-engineering-honours-in-product-innovation-with-marketing/secondary-major/",
+        "file_type": "Website"
+    },
+    "Minor / ISE Secondary Major - AIDA curriculum": {
+        "english": "AIDA curriculum",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "Minor / ISE Secondary Major",
+        "link": "https://www.polyu.edu.hk/dsai/study/ug/secondary-major-in-aida/programme-structure/",
+        "file_type": "Website"
+    },
+    "Minor / ISE Secondary Major - IE curriculum": {
+        "english": "IE curriculum",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "Minor / ISE Secondary Major",
+        "link": "https://www.polyu.edu.hk/mm/study/undergraduate-programmes/secondary-major-in-innovation-and-entrepreneurship/programme-structure/",
+        "file_type": "Website"
+    },
+    "Minor / ISE Secondary Major - List of Minor": {
+        "english": "List of Minor",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "Minor / ISE Secondary Major",
+        "link": "https://www.polyu.edu.hk/ar/students-in-taught-programmes/flexible-study-options/minor/list-of-minors/",
+        "file_type": "Website"
+    },
+    "Minor / ISE Secondary Major - Minor Home Page": {
+        "english": "Minor Home Page",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "Minor / ISE Secondary Major",
+        "link": "https://www.polyu.edu.hk/ar/students-in-taught-programmes/flexible-study-options/minor/",
+        "file_type": "Website"
+    },
+    "Minor / ISE Secondary Major - Minor FAQs": {
+        "english": "Minor FAQs",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "Minor / ISE Secondary Major",
+        "link": "https://support.ar.polyu.edu.hk/portal/en/kb/subregistration/major-minor-study",
+        "file_type": "Website"
+    },
+    "Minor / ISE Secondary Major - Secondary Major Home Page": {
+        "english": "Secondary Major Home Page",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "Minor / ISE Secondary Major",
+        "link": "https://www.polyu.edu.hk/ar/students-in-taught-programmes/flexible-study-options/secondary-major/",
+        "file_type": "Website"
+    },
+    "Minor / ISE Secondary Major - Secondary Major FAQs": {
+        "english": "Secondary Major FAQs",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "Minor / ISE Secondary Major",
+        "link": "https://support.ar.polyu.edu.hk/portal/en/kb/subregistration/secondary-major",
+        "file_type": "Website"
+    },
+    "ISE Scholarships": {
+        "english": "ISE Scholarships",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "ISE Scholarships/ Placement Opportunities",
+        "link": "https://www.polyu.edu.hk/ise/experience-and-opportunities/scholarships-and-financial-aid/",
+        "file_type": "Website"
+    },
+    "ISE Scholarships/ Placement Opportunities - Previous placements": {
+        "english": "Previous placements",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "ISE Scholarships/ Placement Opportunities",
+        "link": "https://www.polyu.edu.hk/ise/experience-and-opportunities/placement-opportunities/",
+        "file_type": "Website"
+    },
+    "About ISE/ Contacts/ Academic Advising - What is ISE": {
+        "english": "What is ISE",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "About ISE/ Contacts/ Academic Advising",
+        "link": "https://www.polyu.edu.hk/ise/study/undergraduate-programmes/what-is-ise/",
+        "file_type": "Website"
+    },
+    "About ISE/ Contacts/ Academic Advising - Vision and Mission": {
+        "english": "Vision and Mission",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "About ISE/ Contacts/ Academic Advising",
+        "link": "https://www.polyu.edu.hk/ise/about-ise/vision-and-mission/",
+        "file_type": "Website"
+    },
+    "About ISE/ Contacts/ Academic Advising - Academic Staff": {
+        "english": "Academic Staff",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "About ISE/ Contacts/ Academic Advising",
+        "link": "https://www.polyu.edu.hk/ise/people/academic-staff/",
+        "file_type": "Website"
+    },
+    "About ISE/ Contacts/ Academic Advising - Non-Academic Staff": {
+        "english": "Non-Academic Staff",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "About ISE/ Contacts/ Academic Advising",
+        "link": "https://www.polyu.edu.hk/ise/people/non-academic-staff/",
+        "file_type": "Website"
+    },
+    "About ISE/ Contacts/ Academic Advising - Emeritus, Honorary and Adjunct Posts": {
+        "english": "Emeritus, Honorary and Adjunct Posts",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "About ISE/ Contacts/ Academic Advising",
+        "link": "https://www.polyu.edu.hk/ise/people/emeritus-honorary-and-adjunct-posts/",
+        "file_type": "Website"
+    },
+    "About ISE/ Contacts/ Academic Advising - Academic Advising for undergraduates": {
+        "english": "Academic Advising for undergraduates",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "About ISE/ Contacts/ Academic Advising",
+        "link": "https://www.polyu.edu.hk/ise/study/information-for-current-students/programme-related-info/academic-advising/",
+        "file_type": "Website"
+    },
+    "General Non-JUPAS/ Senior Entry - Non-JUPAS Senior Year": {
+        "english": "Non-JUPAS Senior Year",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "General Non-JUPAS/ Senior Entry",
+        "link": "https://www.polyu.edu.hk/study/ug/admissions/non-jupas-senior-year",
+        "file_type": "Website"
+    },
+    "General Non-JUPAS/ Senior Entry - Non-JUPAS entry requirement": {
+        "english": "Non-JUPAS entry requirement",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "General Non-JUPAS/ Senior Entry",
+        "link": "https://www.polyu.edu.hk/study/ug/admissions/non-jupas-senior-year/non-jupas-senior-year-general-entrance-requirements",
+        "file_type": "Website"
+    },
+    "General Non-JUPAS/ Senior Entry - Non-JUPAS FAQs": {
+        "english": "Non-JUPAS FAQs",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "General Non-JUPAS/ Senior Entry",
+        "link": "https://www.polyu.edu.hk/study/ug/admissions/non-jupas-senior-year/non-jupas-senior-year-frequently-asked-questions",
+        "file_type": "Website"
+    },
+    "General Non-JUPAS/ Senior Entry - Non-JUPAS Admission figures": {
+        "english": "Non-JUPAS Admission figures",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "General Non-JUPAS/ Senior Entry",
+        "link": "https://www.polyu.edu.hk/aradm/SY/ADHD_Admission_Figures_2026-27.pdf",
+        "file_type": "PDF"
+    },
+    "ISE Credit Transfer": {
+        "english": "ISE Credit Transfer",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "ISE Credit Transfer",
+        "link": "https://www.polyu.edu.hk/ise/study/information-for-current-students/programme-related-info/credit-transfer/",
+        "file_type": "Website"
+    },
+    "ISE Subject Syllabus": {
+        "english": "ISE Subject Syllabus",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "ISE Subject Syllabus",
+        "link": "https://www.polyu.edu.hk/ise/study/information-for-current-students/programme-related-info/subject-syllabi/",
+        "file_type": "Website"
+    },
+    "ISE Internship Opportunities": {
+        "english": "ISE Internship Opportunities",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "ISE Internship Opportunities",
+        "link": "https://www.polyu.edu.hk/ise/experience-and-opportunities/internship-opportunities/",
+        "file_type": "Website"
+    },
+    "Credit Transfer for UG (Important Notes)": {
+        "english": "Credit Transfer for UG (Important Notes)",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "Credit Transfer for UG (Important Notes)",
+        "link": "https://www.polyu.edu.hk/ar/students-in-taught-programmes/credit-transfer/",
+        "file_type": "Website"
+    },
+    "Credit Transfer Database Access Link": {
+        "english": "Credit Transfer Database Access Link",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "Credit Transfer Database Access Link",
+        "link": "https://webapp-srs-its.polyu.edu.hk/creditTransferDB",
+        "file_type": "Website"
+    },
+    "Application Forms": {
+        "english": "Application Forms",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "Application Forms",
+        "link": "https://www.polyu.edu.hk/ar/students-in-taught-programmes/application-forms/",
+        "file_type": "Website"
+    },
+    "JUPAS Admissions - local JUPAS Overview": {
+        "english": "local JUPAS Overview",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "JUPAS Admissions",
+        "link": "https://www.polyu.edu.hk/study/ug/admissions/jupas",
+        "file_type": "Website"
+    },
+    "JUPAS Admissions - local JUPAS Programme Requirements": {
+        "english": "local JUPAS Programme Requirements",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "JUPAS Admissions",
+        "link": "https://www.polyu.edu.hk/study/ug/admissions/jupas/jupas-scheme-programme-requirements",
+        "file_type": "Website"
+    },
+    "JUPAS Admissions - local JUPAS General Entrance Requirements": {
+        "english": "local JUPAS General Entrance Requirements",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "JUPAS Admissions",
+        "link": "https://www.polyu.edu.hk/study/ug/admissions/jupas/jupas-general-entrance-requirements",
+        "file_type": "Website"
+    },
+    "JUPAS Admissions - JUPAS Flexible Admission Arrangements": {
+        "english": "JUPAS Flexible Admission Arrangements",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "JUPAS Admissions",
+        "link": "https://www.polyu.edu.hk/study/ug/admissions/jupas/jupas-flexible-admission-arrangements",
+        "file_type": "Website"
+    },
+    "JUPAS Admissions - local JUPAS Admission Scores": {
+        "english": "local JUPAS Admission Scores",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "JUPAS Admissions",
+        "link": "https://www.polyu.edu.hk/aradm/jupas/admission_figures.pdf",
+        "file_type": "PDF"
+    },
+    "JUPAS Admissions - JUPAS Score Calculator": {
+        "english": "JUPAS Score Calculator",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "JUPAS Admissions",
+        "link": "https://www.polyu.edu.hk/study/ug/admissions/jupas/jupas-score-calculator",
+        "file_type": "Website"
+    },
+    "JUPAS Admissions - JUPAS FAQs": {
+        "english": "JUPAS FAQs",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "JUPAS Admissions",
+        "link": "https://www.polyu.edu.hk/study/ug/admissions/jupas/jupas-frequently-asked-questions-non-academic-achievements",
+        "file_type": "Website"
+    },
+    "JUPAS Admissions - JUPAS Application Procedure": {
+        "english": "JUPAS Application Procedure",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "JUPAS Admissions",
+        "link": "https://www.polyu.edu.hk/study/ug/admissions/jupas/jupas-application-procedures",
+        "file_type": "Website"
+    },
+    "JUPAS Admissions - JUPAS Interview": {
+        "english": "JUPAS Interview",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "JUPAS Admissions",
+        "link": "https://www.polyu.edu.hk/study/ug/admissions/jupas/jupas-interview-arrangement",
+        "file_type": "Website"
+    },
+    "JUPAS Admissions - Students under 18": {
+        "english": "Students under 18",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "JUPAS Admissions",
+        "link": "https://www.polyu.edu.hk/study/ug/admissions/jupas/jupas-student-under-18",
+        "file_type": "Website"
+    },
+    "JUPAS Admissions - SNDAS": {
+        "english": "SNDAS",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "JUPAS Admissions",
+        "link": "https://www.polyu.edu.hk/study/ug/admissions/jupas/jupas-school-nominations-direct-admission-scheme-sndas",
+        "file_type": "Website"
+    },
+    "JUPAS Admissions - STARS": {
+        "english": "STARS",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "JUPAS Admissions",
+        "link": "https://www.polyu.edu.hk/study/ug/admissions/special-talents-admission-and-recognition-scheme",
+        "file_type": "Website"
+    },
+    "JUPAS Admissions - Non-local Applicants": {
+        "english": "Non-local Applicants",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "JUPAS Admissions",
+        "link": "https://www.polyu.edu.hk/study/ug/admissions/jupas/jupas-non-local-applicants",
+        "file_type": "Website"
+    },
+    "JUPAS Admissions - Distinctive Features of UG": {
+        "english": "Distinctive Features of UG",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "JUPAS Admissions",
+        "link": "https://www.polyu.edu.hk/study/ug/admissions/jupas/jupas-distinctive-features-ug-programmes",
+        "file_type": "Website"
+    },
+    "JUPAS Admissions - Curriculum framework": {
+        "english": "Curriculum framework",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "JUPAS Admissions",
+        "link": "https://www.polyu.edu.hk/study/ug/admissions/jupas/jupas-curriculum-framework",
+        "file_type": "Website"
+    },
+    "JUPAS Admissions - Admission Selection": {
+        "english": "Admission Selection",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "JUPAS Admissions",
+        "link": "https://www.polyu.edu.hk/study/ug/admissions/jupas/jupas-admission-selection",
+        "file_type": "Website"
+    },
+    "JUPAS Admissions - Concurrent Enrolment": {
+        "english": "Concurrent Enrolment",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "JUPAS Admissions",
+        "link": "https://www.polyu.edu.hk/study/ug/admissions/jupas/jupas-concurrent-enrolment",
+        "file_type": "Website"
+    },
+    "JUPAS Admissions - Inter-Institutional Transfer": {
+        "english": "Inter-Institutional Transfer",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "JUPAS Admissions",
+        "link": "https://www.polyu.edu.hk/study/ug/admissions/jupas/jupas-inter-institutional-transfer",
+        "file_type": "Website"
+    },
+    "JUPAS Admissions - Re-admission": {
+        "english": "Re-admission",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "JUPAS Admissions",
+        "link": "https://www.polyu.edu.hk/study/ug/admissions/jupas/jupas-re-admission",
+        "file_type": "Website"
+    },
+    "JUPAS Admissions - Applicants with Disabilities / Special Educational Needs": {
+        "english": "Applicants with Disabilities / Special Educational Needs",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "JUPAS Admissions",
+        "link": "https://www.polyu.edu.hk/study/ug/admissions/jupas/jupas-applicants-disabilities-special-educational-needs",
+        "file_type": "Website"
+    },
+    "JUPAS Admissions - Tuition Fees": {
+        "english": "Tuition Fees",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "JUPAS Admissions",
+        "link": "https://www.polyu.edu.hk/study/ug/admissions/jupas/jupas-tuition-fees",
+        "file_type": "Website"
+    },
+    "JUPAS Admissions - Other fees": {
+        "english": "Other fees",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "JUPAS Admissions",
+        "link": "https://www.polyu.edu.hk/study/ug/admissions/jupas/jupas-other-fees-and-expenses",
+        "file_type": "Website"
+    },
+    "JUPAS Admissions - Financial Assistance": {
+        "english": "Financial Assistance",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "JUPAS Admissions",
+        "link": "https://www.polyu.edu.hk/study/ug/admissions/jupas/jupas-financial-assistance",
+        "file_type": "Website"
+    },
+    "JUPAS Admissions - Admission Leaflet": {
+        "english": "Admission Leaflet",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "JUPAS Admissions",
+        "link": "https://www.polyu.edu.hk/geo/-/media/department/geo/content/prospective-students/local/polyu-jupas-admission-brochure-2026.pdf?rev=6613e6ed6f8641b695faee5fa4e5de12&hash=6788EB7B49D10F7701190EBB21E11102",
+        "file_type": "PDF"
+    },
+    "JUPAS Admissions - Mature Applicants": {
+        "english": "Mature Applicants",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "JUPAS Admissions",
+        "link": "https://www.polyu.edu.hk/study/ug/admissions/non-jupas-year-1/non-jupas-year-1-mature-applicants",
+        "file_type": "Website"
+    },
+    "JUPAS Admissions - Qualification Verification": {
+        "english": "Qualification Verification",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "JUPAS Admissions",
+        "link": "https://www.polyu.edu.hk/study/ug/admissions/non-jupas-year-1/non-jupas-year-1-qualification-verification",
+        "file_type": "Website"
+    },
+    "Non-JUPAS Senior Year - Entrance Requirements": {
+        "english": "Entrance Requirements",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "Non-JUPAS Senior Year",
+        "link": "https://www.polyu.edu.hk/study/ug/admissions/non-jupas-senior-year/non-jupas-senior-year-general-entrance-requirements",
+        "file_type": "Website"
+    },
+    "Non-JUPAS Senior Year - Application Procedures": {
+        "english": "Application Procedures",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "Non-JUPAS Senior Year",
+        "link": "https://www.polyu.edu.hk/study/ug/admissions/non-jupas-senior-year/non-jupas-senior-year-general-application-procedures",
+        "file_type": "Website"
+    },
+    "Non-JUPAS Senior Year - SYA Project": {
+        "english": "SYA Project",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "Non-JUPAS Senior Year",
+        "link": "https://www.polyu.edu.hk/syaproject/en/",
+        "file_type": "Website"
+    },
+    "Non-JUPAS Senior Year - Interview Arrangement": {
+        "english": "Interview Arrangement",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "Non-JUPAS Senior Year",
+        "link": "https://www.polyu.edu.hk/study/ug/admissions/non-jupas-senior-year/non-jupas-senior-year-interview-arrangement",
+        "file_type": "Website"
+    },
+    "Non-JUPAS Senior Year - Additional Supporting Documents": {
+        "english": "Additional Supporting Documents",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "Non-JUPAS Senior Year",
+        "link": "https://www.polyu.edu.hk/study/ug/admissions/non-jupas-senior-year/non-jupas-senior-year-additional-supporting-documents-required",
+        "file_type": "Website"
+    },
+    "Non-JUPAS Senior Year - Definition of non-local applicants": {
+        "english": "Definition of non-local applicants",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "Non-JUPAS Senior Year",
+        "link": "https://www.polyu.edu.hk/study/ug/admissions/non-jupas-senior-year/non-jupas-senior-year-definition-non-local-applicants",
+        "file_type": "Website"
+    },
+    "Non-JUPAS Senior Year - Curriculum": {
+        "english": "Curriculum",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "Non-JUPAS Senior Year",
+        "link": "https://www.polyu.edu.hk/study/ug/admissions/non-jupas-senior-year/non-jupas-senior-year-curriculum-structure",
+        "file_type": "Website"
+    },
+    "Non-JUPAS Senior Year - Credit Transfer and Exemption": {
+        "english": "Credit Transfer and Exemption",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "Non-JUPAS Senior Year",
+        "link": "https://www.polyu.edu.hk/study/ug/admissions/non-jupas-senior-year/non-jupas-senior-year-credit-transfer-and-exemption",
+        "file_type": "Website"
+    },
+    "Non-JUPAS Senior Year - Concurrent Enrolment": {
+        "english": "Concurrent Enrolment",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "Non-JUPAS Senior Year",
+        "link": "https://www.polyu.edu.hk/study/ug/admissions/non-jupas-senior-year/non-jupas-senior-year-concurrent-enrolment",
+        "file_type": "Website"
+    },
+    "Non-JUPAS Senior Year - Inter-Institutional Transfer": {
+        "english": "Inter-Institutional Transfer",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "Non-JUPAS Senior Year",
+        "link": "https://www.polyu.edu.hk/study/ug/admissions/non-jupas-senior-year/non-jupas-senior-year-inter-institutional-transfer",
+        "file_type": "Website"
+    },
+    "Non-JUPAS Senior Year - Tuition Fees": {
+        "english": "Tuition Fees",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "Non-JUPAS Senior Year",
+        "link": "https://www.polyu.edu.hk/study/ug/admissions/non-jupas-senior-year/non-jupas-senior-year-tuition-fees",
+        "file_type": "Website"
+    },
+    "Non-JUPAS Senior Year - Other Fees": {
+        "english": "Other Fees",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "Non-JUPAS Senior Year",
+        "link": "https://www.polyu.edu.hk/study/ug/admissions/non-jupas-senior-year/non-jupas-senior-year-other-fees-and-expenses",
+        "file_type": "Website"
+    },
+    "Non-JUPAS Senior Year - Financial Assistance": {
+        "english": "Financial Assistance",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "Non-JUPAS Senior Year",
+        "link": "https://www.polyu.edu.hk/study/ug/admissions/non-jupas-senior-year/non-jupas-senior-year-financial-assistance",
+        "file_type": "Website"
+    },
+    "Non-JUPAS Senior Year - Non-JUPAS FAQs": {
+        "english": "Non-JUPAS FAQs",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "Non-JUPAS Senior Year",
+        "link": "https://www.polyu.edu.hk/study/ug/admissions/non-jupas-senior-year/non-jupas-senior-year-frequently-asked-questions",
+        "file_type": "Website"
+    },
+    "Career Opportunities - Job Board": {
+        "english": "Job Board",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "Career Opportunities",
+        "link": "https://jobboard-sao.polyu.edu.hk/login?callbackUrl=/",
+        "file_type": "Website"
+    },
+    "Career Opportunities - Work-on-Campus Scheme": {
+        "english": "Work-on-Campus Scheme",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "Career Opportunities",
+        "link": "https://www.polyu.edu.hk/sao/careers-and-placement-section/job-opportunities/work-on-campus-scheme/",
+        "file_type": "Website"
+    },
+    "Career Opportunities - SAO External Job Opportunities": {
+        "english": "SAO External Job Opportunities",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "Career Opportunities",
+        "link": "https://www.polyu.edu.hk/sao/internal/careers-and-placement-section/external-opportunities/",
+        "file_type": "Website"
+    },
+    "Career Opportunities - Career Development": {
+        "english": "Career Development",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "Career Opportunities",
+        "link": "https://www.polyu.edu.hk/sao/careers-and-placement-section/career-development/",
+        "file_type": "Website"
+    },
+    "Online Student Service - Counselling (SAO)": {
+        "english": "Counselling (SAO)",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "Online Student Service",
+        "link": "https://www.polyu.edu.hk/sao/",
+        "file_type": "Website"
+    },
+    "Online Student Service - Residential Life": {
+        "english": "Residential Life",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "Online Student Service",
+        "link": "https://www.polyu.edu.hk/sao/student-resources-and-support-section/residential-life/",
+        "file_type": "Website"
+    },
+    "Online Student Service - 2026 Orientation": {
+        "english": "2026 Orientation",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "Online Student Service",
+        "link": "https://www.polyu.edu.hk/nso/student-orientation/polyu-student-orientation-2026/",
+        "file_type": "Website"
+    },
+    "Online Student Service - Student Resources and Support": {
+        "english": "Student Resources and Support",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "Online Student Service",
+        "link": "https://www.polyu.edu.hk/nso/find-your-support/student-resources-and-support/",
+        "file_type": "Website"
+    },
+    "Online Student Service - Useful Information for new students": {
+        "english": "Useful Information for new students",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "Online Student Service",
+        "link": "https://www.polyu.edu.hk/nso/useful-information/",
+        "file_type": "Website"
+    },
+    "Online Student Service - Important Reminders to new students": {
+        "english": "Important Reminders to new students",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "Online Student Service",
+        "link": "https://www.polyu.edu.hk/nso/important-reminders/",
+        "file_type": "Website"
+    },
+    "Emergency Contacts": {
+        "english": "Emergency Contacts",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "Emergency Contacts",
+        "link": "https://www.polyu.edu.hk/sao/counselling-and-wellness-section/student-counselling/emergency-support/non-office-hours/",
+        "file_type": "Website"
+    },
+    "Hall Applications - Page": {
+        "english": "Page",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "Hall Applications",
+        "link": "https://www.polyu.edu.hk/sao/student-resources-and-support-section/residential-life/hall-admission/hall-applications/",
+        "file_type": "Website"
+    },
+    "Hall Applications - Hall(Current UG)": {
+        "english": "Hall(Current UG)",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "Hall Applications",
+        "link": "https://www.polyu.edu.hk/en/sao/student-resources-and-support-section/residential-life/hall-admission/hall-applications/undergraduate-halls-sem-1-2/",
+        "file_type": "Website"
+    },
+    "Hall Applications - Hall(Non-local new students)": {
+        "english": "Hall(Non-local new students)",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "Hall Applications",
+        "link": "https://www.polyu.edu.hk/en/sao/student-resources-and-support-section/residential-life/hall-admission/hall-applications/prospective-non-local-undergraduate-students/",
+        "file_type": "Website"
+    },
+    "Hall Applications - Admission Policies(UG)": {
+        "english": "Admission Policies(UG)",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "Hall Applications",
+        "link": "https://www.polyu.edu.hk/sao/student-resources-and-support-section/residential-life/hall-admission/admission-policies-undergraduates/",
+        "file_type": "Website"
+    },
+    "Hall Applications - Hall(Research students)": {
+        "english": "Hall(Research students)",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "Hall Applications",
+        "link": "https://www.polyu.edu.hk/en/sao/student-resources-and-support-section/residential-life/hall-admission/hall-applications/full-time-research-students/",
+        "file_type": "Website"
+    },
+    "Hall Applications - Admission Polocies(Research)": {
+        "english": "Admission Polocies(Research)",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "Hall Applications",
+        "link": "https://www.polyu.edu.hk/sao/student-resources-and-support-section/residential-life/hall-admission/admission-policies-rpg/",
+        "file_type": "Website"
+    },
+    "Hall Applications - Regulations Governing Hall Residence": {
+        "english": "Regulations Governing Hall Residence",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "Hall Applications",
+        "link": "https://www.polyu.edu.hk/sao/student-resources-and-support-section/residential-life/university-managed-accommodations/hung-hom-halls/hall-handbook-and-hall-regulations/regulations-governing-hall-residence/",
+        "file_type": "Website"
+    },
+    "Hall Applications - Hung Hom Halls": {
+        "english": "Hung Hom Halls",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "Hall Applications",
+        "link": "https://www.polyu.edu.hk/sao/student-resources-and-support-section/residential-life/university-managed-accommodations/hung-hom-halls/",
+        "file_type": "Website"
+    },
+    "Hall Applications - Homantin Halls": {
+        "english": "Homantin Halls",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "Hall Applications",
+        "link": "https://www.polyu.edu.hk/sao/student-resources-and-support-section/residential-life/university-managed-accommodations/homantin-halls/",
+        "file_type": "Website"
+    },
+    "Hall Applications - Hall fees": {
+        "english": "Hall fees",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "Hall Applications",
+        "link": "https://www.polyu.edu.hk/sao/student-resources-and-support-section/residential-life/hall-admission/hall-fees/",
+        "file_type": "Website"
+    },
+    "Hall Applications - Hall(local new studenst)": {
+        "english": "Hall(local new studenst)",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "Hall Applications",
+        "link": "https://www.polyu.edu.hk/en/sao/student-resources-and-support-section/residential-life/hall-admission/hall-applications/prospective-local-full-time-undergraduate-students/",
+        "file_type": "Website"
+    },
+    "Hall Applications - Summer Hall Residence 2026": {
+        "english": "Summer Hall Residence 2026",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "Hall Applications",
+        "link": "https://www.polyu.edu.hk/en/sao/student-resources-and-support-section/residential-life/hall-admission/hall-applications/summer-hall-residence/",
+        "file_type": "Website"
+    },
+    "Hall Applications - General Hall Information": {
+        "english": "General Hall Information",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "Hall Applications",
+        "link": "https://www.polyu.edu.hk/sao/student-resources-and-support-section/residential-life/hall-admission/admission-policies-undergraduates/general-information/",
+        "file_type": "Website"
+    },
+    "SAO (Job Opportunities) - Local Internships": {
+        "english": "Local Internships",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "SAO (Job Opportunities)",
+        "link": "https://www.polyu.edu.hk/sao/internal/careers-and-placement-section/local-internship-programme/",
+        "file_type": "Website"
+    },
+    "SAO (Job Opportunities) - STEM Internship Scheme Summer 2026": {
+        "english": "STEM Internship Scheme Summer 2026",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "SAO (Job Opportunities)",
+        "link": "https://www.polyu.edu.hk/sao/careers-and-placement-section/job-opportunities/stem-internship-scheme/",
+        "file_type": "Website"
+    },
+    "SAO (Job Opportunities) - Job Recommendation (Job Board)": {
+        "english": "Job Recommendation (Job Board)",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "SAO (Job Opportunities)",
+        "link": "https://www.polyu.edu.hk/sao/careers-and-placement-section/job-opportunities/polyu-job-board/",
+        "file_type": "Website"
+    },
+    "SAO (Job Opportunities) - Work-on-Campus (SEN)": {
+        "english": "Work-on-Campus (SEN)",
+        "chinese": "",
+        "abbreviation": "",
+        "category": "SAO (Job Opportunities)",
+        "link": "https://www.polyu.edu.hk/sao/internal/careers-and-placement-section/work-on-campus-scheme-sen/",
+        "file_type": "Website"
+    }
+}
