@@ -161,7 +161,7 @@ pip install --cache-dir "$TMP_PIP_DIR" --upgrade pip
 # Install required modules used across the RAG application and Docling parser
 pip install --cache-dir "$TMP_PIP_DIR" \
     fastapi uvicorn pydantic requests beautifulsoup4 pdfplumber pypdf \
-    langchain langchain-core langchain-community langchain-qdrant qdrant-client \
+    langchain==<compatible-version> langchain-core langchain-community langchain-qdrant qdrant-client \
     langchain-ollama python-dotenv python-telegram-bot docling pandas nltk
 
 echo -e "${GREEN}✓ All application modules installed successfully.${NC}"

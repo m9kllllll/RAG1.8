@@ -74,13 +74,13 @@ except LookupError:
 from langchain_qdrant import QdrantVectorStore
 from qdrant_client import QdrantClient
 from qdrant_client.http.models import Distance, VectorParams
-
+from qdrant_client.http.models import Filter, FieldCondition, MatchValue, MatchAny
 from langchain_ollama import ChatOllama
 from langchain_community.embeddings import OllamaEmbeddings
 
 # Standard LangChain chain factory functions
-from langchain.chains import create_retrieval_chain
-from langchain.chains.combine_documents import create_stuff_documents_chain
+from langchain_classic.chains import create_retrieval_chain
+from langchain_classic.chains.combine_documents import create_stuff_documents_chain
 
 load_dotenv(override=True)
 logging.basicConfig(format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=logging.INFO)
@@ -1013,15 +1013,79 @@ class ScoreInjectingRetriever(BaseRetriever):
         start = time.perf_counter()
 
         def vector_lookup():
-            return self.vectorstore.similarity_search_with_score(query, k=plan["vector_k"])
+            # Extract basic query intent to inform the Qdrant filter
+            query_lower = raw_query.lower()
+            is_pg_query = any(kw in query_lower for kw in ["master", "msc", "postgraduate", "pgd", "pg"])
+            is_ug_query = any(kw in query_lower for kw in ["bachelor", "bsc", "beng", "undergraduate", "ug"])
+            
+            qdrant_filter = None
+            
+            # Apply the HARD Qdrant filter based on academic level intent
+            if is_pg_query and not is_ug_query:
+                qdrant_filter = Filter(
+                    must=[
+                        FieldCondition(
+                            key="metadata.academic_level",
+                            match=MatchAny(any=["PG", "General"]) 
+                        )
+                    ]
+                )
+            elif is_ug_query and not is_pg_query:
+                qdrant_filter = Filter(
+                    must=[
+                        FieldCondition(
+                            key="metadata.academic_level",
+                            match=MatchAny(any=["UG", "General"])
+                        )
+                    ]
+                )
+                
+            # Perform search with filter passed directly to the Qdrant engine
+            return self.vectorstore.similarity_search_with_score(
+                query, 
+                k=plan["vector_k"],
+                filter=qdrant_filter
+            )
 
         def bm25_lookup():
             if not self.bm25:
                 return []
+                
+            query_lower = raw_query.lower()
+            is_pg_query = any(kw in query_lower for kw in ["master", "msc", "postgraduate", "pgd", "pg"])
+            is_ug_query = any(kw in query_lower for kw in ["bachelor", "bsc", "beng", "undergraduate", "ug"])
+            
+            # Overfetch trick since BM25 local doesn't support metadata filtering at query time
+            original_k = self.bm25.k
+            overfetch_k = plan["bm25_k"] * 3
+            self.bm25.k = overfetch_k 
+            
             try:
-                return self.bm25.invoke(query)
+                raw_bm25_docs = self.bm25.invoke(query)
             except AttributeError:
-                return self.bm25.get_relevant_documents(query)
+                raw_bm25_docs = self.bm25.get_relevant_documents(query)
+                
+            self.bm25.k = original_k # reset k
+            
+            # Manual Post-Filtering for BM25 docs
+            filtered_bm25_docs = []
+            for doc in raw_bm25_docs:
+                level = str(doc.metadata.get("academic_level", "General")).upper()
+                
+                if is_pg_query and not is_ug_query:
+                    if level not in ["PG", "GENERAL"]:
+                        continue # Drop UG
+                elif is_ug_query and not is_pg_query:
+                    if level not in ["UG", "GENERAL"]:
+                        continue # Drop PG
+                        
+                filtered_bm25_docs.append(doc)
+                
+                # Stop when we have enough matched documents
+                if len(filtered_bm25_docs) >= plan["bm25_k"]:
+                    break
+                    
+            return filtered_bm25_docs
 
         docs_and_scores = vector_lookup()
         bm25_docs = bm25_lookup()
@@ -1071,19 +1135,17 @@ class ScoreInjectingRetriever(BaseRetriever):
             if is_wie_query and ("work-integrated" in content_lower or "wie" in content_lower or "實習" in content_lower):
                 effective_score += 0.35
 
+            # The hard filters above prevent completely irrelevant documents from getting here,
+            # but we still apply soft boosting here for documents that made the cut.
             has_ug_code = bool(re.search(r'\bISE[1-4]\d{3}\b', content, re.IGNORECASE))
             has_pg_code = bool(re.search(r'\bISE[5-6]\d{3}\b', content, re.IGNORECASE))
 
             if is_pg_query:
                 if has_pg_code or level_meta == "PG":
                     effective_score += 0.25
-                if has_ug_code or level_meta == "UG":
-                    effective_score -= 0.20
             else:
                 if has_ug_code or level_meta == "UG":
                     effective_score += 0.25
-                if has_pg_code or level_meta == "PG":
-                    effective_score -= 0.35
 
             if "prd" in source or "programme_def" in source:
                 effective_score += 0.15
